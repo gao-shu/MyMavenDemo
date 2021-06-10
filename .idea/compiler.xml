@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mybatisPlus" />
         <module name="servlet" />
+        <module name="myTest" />
       </profile>
     </annotationProcessing>
   </component>

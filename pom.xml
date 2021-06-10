@@ -11,6 +11,7 @@
     <modules>
         <module>mybatisPlus</module>
         <module>servlet</module>
+        <module>myTest</module>
     </modules>
 
     <dependencies>
