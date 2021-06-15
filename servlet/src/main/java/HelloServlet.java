@@ -1,21 +1,36 @@
-import javax.servlet.ServletException;
-import javax.servlet.ServletInputStream;
-import javax.servlet.ServletOutputStream;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
+import java.util.Properties;
 
 public class HelloServlet extends HttpServlet {
-    // 由于get或者post只是请求的不同实现方式，可以相互调用，业务逻辑一样
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        ServletInputStream inputStream = req.getInputStream();
-        ServletOutputStream outputStream = resp.getOutputStream();
+//        ServletOutputStream outputStream = resp.getOutputStream();
         PrintWriter writer = resp.getWriter();
         writer.println("hello , serlvet");
-        outputStream.
+
+
+        //servletContext  ____会被替换
+        //1.共享数据  ————session或者requecst
+        ServletContext servletContext = this.getServletContext();
+        //2. 获取初始化参数
+        servletContext.setAttribute("userName", 123);
+        //3.请求转发
+        servletContext.getRequestDispatcher("/s").forward(req, resp);
+        //4.读取配置文件
+        InputStream stream = servletContext.getResourceAsStream("/WEB-INF/classes/db.propreties");
+        Properties properties = new Properties();
+        properties.load(stream);
+        properties.get("username");
+
     }
 
     @Override
