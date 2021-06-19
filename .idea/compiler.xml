@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mybatisPlus" />
+        <module name="oh-my-email-master" />
         <module name="POI" />
         <module name="servlet" />
         <module name="myTest" />
+        <module name="mybatis" />
       </profile>
     </annotationProcessing>
   </component>
