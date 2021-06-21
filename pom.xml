@@ -15,6 +15,7 @@
         <module>POI</module>
         <module>oh-my-email-master</module>
         <module>mybatis</module>
+        <module>swagger-demo</module>
     </modules>
 
     <dependencies>
