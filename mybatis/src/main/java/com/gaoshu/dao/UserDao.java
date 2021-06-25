@@ -1,30 +1,37 @@
 package com.gaoshu.dao;
 
-public class UserDao {
-    private Integer age;
-    private String name;
+import cn.hutool.core.lang.Dict;
+import cn.hutool.json.JSONObject;
+import com.gaoshu.pojo.User;
+import com.gaoshu.pojo.VO.UserVO;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
-    public Integer getAge() {
-        return age;
-    }
+import java.util.List;
+import java.util.Map;
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
+public interface UserDao {
 
-    public String getName() {
-        return name;
-    }
+    List<User> getUserList();
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    User getUserById(Integer id);
 
-    @Override
-    public String toString() {
-        return "UserDao{" +
-                "age=" + age +
-                ", name='" + name + '\'' +
-                '}';
-    }
+    @Select("select * from user where id = #{id}")
+    JSONObject getUserById2(Integer id);
+
+    @Select("select id, name , pwd as password from user where id = #{id}")
+    UserVO getUserById3(Integer id);
+
+    User getUserById4(Integer id);
+
+    UserVO getUserById5(Integer id);
+
+    List<User> getUserBylimit(Map<String, Integer> map);
+    List<User> getUserBylimit(Dict dict);
+    // 分页
+    List<User> getUserByRoeBounds(Dict dict);
+    //注解
+//    UserVO getUserById6(@Param("userId") Integer id);
+    UserVO getUserById6(@Param("id") Integer id);
+
 }

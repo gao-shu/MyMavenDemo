@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gaoshu.dao.UserDao">
+
+    <!--开启二级缓存-->
+    <cache
+            eviction="FIFO"
+            flushInterval="60000"
+            size="512"
+            readOnly="true"/>
+    <!--使用ehcache-->
+    <cache type="com.domian.something.MyCustomCache"/>
+
+
+    <select id="getUserList" resultType="com.gaoshu.pojo.User">
+        select * from user
+    </select>
+
+    <select id="getUserById" resultType="com.gaoshu.pojo.User">
+        select * from user where id = #{id}
+    </select>
+
+    <select id="getUserById4" resultType="User">
+        select * from user where id = #{id}
+    </select>
+
+    <!--结果集映射-->
+    <resultMap id="userMap" type="userVO">
+        <!--colum数据库中的字段，property实体类中的属性-->
+        <result column="pwd" property="password"></result>
+    </resultMap>
+    <select id="getUserById5" resultMap="userMap">
+        select * from user where id = #{id}
+    </select>
+
+
+    <select id="getUserBylimit" parameterType="map" resultType="user">
+        select * from user limit #{index}, #{page}
+    </select>
+
+    <select id="getUserByRoeBounds" parameterType="map" resultType="user">
+        select * from user
+    </select>
+
+    <select id="getUserById6" resultMap="userMap">
+        select * from user where id = #{id}
+    </select>
+</mapper>
