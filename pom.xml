@@ -17,6 +17,9 @@
         <module>mybatis</module>
         <module>swagger-demo</module>
         <module>mybatis_demo</module>
+        <module>hutoolsUtil</module>
+        <module>kingDee</module>
+        <module>RedisUtil</module>
     </modules>
 
     <dependencies>
@@ -75,6 +78,12 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 

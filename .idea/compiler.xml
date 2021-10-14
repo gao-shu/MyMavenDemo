@@ -9,8 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="oh-my-email-master" />
         <module name="servlet" />
+        <module name="RedisUtil" />
         <module name="mybatis" />
         <module name="mybatisPlus" />
+        <module name="kingDee" />
+        <module name="hutoolsUtil" />
         <module name="POI" />
         <module name="swagger-demo" />
         <module name="myTest" />
