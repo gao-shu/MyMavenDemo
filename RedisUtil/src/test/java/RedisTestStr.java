@@ -11,9 +11,12 @@ public class RedisTestStr {
 
     /**
      * 应用场景
-     * 1.计数/秒杀
-     * 2.分布式锁
+     * 1.缓存常用信息
+     * 2.计数/秒杀
+     * 3.分布式锁
+     * 4.限制访问次数，
      */
+
     /**
      * Description:redis的字符串
      * set,get,用于存放字符串数据
