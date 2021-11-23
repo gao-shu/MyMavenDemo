@@ -10,21 +10,25 @@
         <module name="oh-my-email-master" />
         <module name="servlet" />
         <module name="RedisUtil" />
+        <module name="mybatisPlus_AutoGenerator" />
         <module name="mybatis" />
-        <module name="mybatisPlus" />
         <module name="kingDee" />
         <module name="hutoolsUtil" />
         <module name="POI" />
+        <module name="MyBatis-Plus" />
         <module name="swagger-demo" />
         <module name="myTest" />
+        <module name="springboot01" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mybatis_demo" target="8" />
+      <module name="mybatisPlus" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot01" options="-parameters" />
       <module name="swagger-demo" options="-parameters" />
     </option>
   </component>

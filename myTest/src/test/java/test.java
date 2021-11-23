@@ -5,10 +5,8 @@ import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONUtil;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @Title: test
@@ -58,7 +56,7 @@ public class test {
         System.out.println(Message);
 
     }
-    
+
    @Test
    public void demo4(){
        String s1 = "{\"垫付\":[1021],\"代收\":[1021]}";
@@ -88,7 +86,7 @@ public class test {
        JSONArray objects = JSONUtil.parseArray("[[106168,\"灰袋子仓库\",\"A\",\"CK005\",\"领杰包装有限公司\",\"101\"],[106169,\"白袋子仓\",\"A\",\"CK006\",\"领杰包装有限公司\",\"101\"],[106170,\"打包带仓\",\"A\",\"CK007\",\"领杰包装有限公司\",\"101\"],[106171,\"打包带仓\",\"A\",\"CK002\",\"打包带公司\",\"102\"],[106172,\"和信仓\",\"A\",\"CK002\",\"和信包装公司\",\"103\"],[106173,\"商丘仓库\",\"A\",\"CK002\",\"商丘公司\",\"104\"],[106174,\"辽宁仓\",\"A\",\"CK002\",\"辽宁分仓\",\"105\"],[106175,\"湖北分仓\",\"A\",\"CK002\",\"湖北分仓\",\"106\"],[106176,\"广东分仓\",\"A\",\"CK002\",\"广东分仓\",\"107\"],[106177,\"江西分仓\",\"A\",\"CK002\",\"江西分仓\",\"108\"],[106178,\"西安\",\"A\",\"CK001\",\"西安\",\"109\"],[106179,\"临沂市场仓\",\"A\",\"CK001\",\"临沂市场部\",\"110\"],[106180,\"王力公司仓\",\"A\",\"CK001\",\"王力公式\",\"111\"],[106181,\"小祝公司仓\",\"A\",\"CK001\",\"小祝公式\",\"112\"],[112156,\"A仓\",\"A\",\"CK007\",\"领杰集团\",\"100\"],[114350,\"B仓库\",\"A\",\"CK002\",\"西安\",\"109\"],[114351,\"C仓库\",\"A\",\"CK003\",\"西安\",\"109\"]]");
        System.out.println(objects);
    }
-   
+
    @Test
    public void demo7(){
        String s = "[[{\"Result\":{\"ResponseStatus\":{\"ErrorCode\":500,\"IsSuccess\":false,\"Errors\":[{\"FieldName\":null,\"Message\":\"会话信息已丢失，请重新登录\",\"DIndex\":0}],\"SuccessEntitys\":[],\"SuccessMessages\":[],\"MsgCode\":1}}}]]";
@@ -98,5 +96,19 @@ public class test {
        }
    }
 
+   @Test
+   public void demo8(){
+       String addressKd = ",江苏省,";
+       String[] split = addressKd.toString().split(",");
+       System.out.println(split.length);
+   }
+
+   @Test
+   public void demo9(){
+       List<String> strings = Arrays.asList("abc", "def", "gkh", "abc");
+       strings.stream().peek(r -> r = r + "234").collect(Collectors.toList());
+//       strings.stream().map((String)s -> System.out.println(s));
+       strings.forEach(s -> System.out.println(s));
+   }
 
 }

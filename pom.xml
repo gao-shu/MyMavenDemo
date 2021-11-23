@@ -20,6 +20,8 @@
         <module>hutoolsUtil</module>
         <module>kingDee</module>
         <module>RedisUtil</module>
+        <module>mybatisPlus_AutoGenerator</module>
+        <module>MyBatis-Plus</module>
     </modules>
 
     <dependencies>

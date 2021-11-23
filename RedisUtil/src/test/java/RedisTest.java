@@ -7,7 +7,7 @@ import redis.clients.jedis.Jedis;
  * @author: gaoshu
  * @date: 2021/10/14 16:46
  */
-public class RedisTestStr {
+public class RedisTest {
 
     /**
      * 四大应用场景

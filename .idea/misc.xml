@@ -9,10 +9,12 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/swagger-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot01/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/mybatisPlus/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis_demo/pom.xml" />
       </set>
     </option>
