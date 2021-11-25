@@ -8,14 +8,19 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/swagger-demo/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot01/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-plus/pom.xml" />
+        <option value="$PROJECT_DIR$/knife4j/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/MyBatis-Plus/pom.xml" />
         <option value="$PROJECT_DIR$/mybatisPlus/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisPlus_AutoGenerator/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/oh-my-email-master/pom.xml" />
+        <option value="$PROJECT_DIR$/servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/swagger-demo/pom.xml" />
       </set>
     </option>
   </component>

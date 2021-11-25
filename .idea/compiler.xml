@@ -7,29 +7,39 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="oh-my-email-master" />
-        <module name="servlet" />
         <module name="RedisUtil" />
-        <module name="mybatisPlus_AutoGenerator" />
         <module name="mybatis" />
         <module name="kingDee" />
         <module name="hutoolsUtil" />
         <module name="POI" />
-        <module name="MyBatis-Plus" />
-        <module name="swagger-demo" />
+        <module name="knife4j" />
+        <module name="mybatis-plus" />
         <module name="myTest" />
-        <module name="springboot01" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="LuckyFrameWeb" target="1.8" />
+      <module name="MyBatis-Plus" target="8" />
+      <module name="mybatis-plus-demo" target="1.8" />
       <module name="mybatis_demo" target="8" />
       <module name="mybatisPlus" target="8" />
+      <module name="mybatisPlus_AutoGenerator" target="8" />
+      <module name="oh-my-email-master" target="8" />
+      <module name="servlet" target="1.5" />
+      <module name="springboot01" target="1.8" />
+      <module name="swagger-demo" target="1.8" />
+      <module name="swagger_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="LuckyFrameWeb" options="-parameters" />
+      <module name="knife4j" options="-parameters" />
+      <module name="mybatis-plus" options="-parameters" />
+      <module name="mybatis-plus-demo" options="-parameters" />
       <module name="springboot01" options="-parameters" />
       <module name="swagger-demo" options="-parameters" />
+      <module name="swagger_test" options="-parameters" />
     </option>
   </component>
 </project>
