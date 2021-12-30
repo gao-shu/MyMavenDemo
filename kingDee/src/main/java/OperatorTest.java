@@ -126,10 +126,10 @@ public class OperatorTest {
             String sFormId = "";
             String sContent = "{\n" +
                     "    \"FormId\": \"BD_OPERATOR\",\n" +
-                    "    \"FieldKeys\": \"FEmpNumber,FBizOrgId,FNumber,FOperatorType_ETY,FBizOrgId.FNumber,FName,Fdept\",\n" +
+                    "    \"FieldKeys\": \"FEmpNumber,FBizOrgId,FNumber,FOperatorType_ETY,FBizOrgId.FNumber,FName,Fdept,FStaffId.FNumber\",\n" +
                     "    \"FilterString\": \"\",\n" +
-//                    "    \"FilterString\": \"FName = '赵鹏'\",\n" +
-                    "    \"FilterString\": \"FOperatorType_ETY='XSY' and FName = '李振'\",\n" +
+                    "    \"FilterString\": \"FName = '南海龙'\",\n" +
+//                    "    \"FilterString\": \"FOperatorType_ETY='XSY' and FName = '李振'\",\n" +
                     "    \"OrderString\": \"\",\n" +
                     "    \"TopRowCount\": 0,\n" +
                     "    \"StartRow\": 0,\n" +

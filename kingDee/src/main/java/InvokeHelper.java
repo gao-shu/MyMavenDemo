@@ -33,9 +33,20 @@ public class InvokeHelper {
 //    private static String uid = "demo";
 //    private static String pwd = "888888";
     // 临沂包装有限公司
-    private static String uid = "demo";
+//    private static String uid = "demo";
+//    private static String dbId = "613704993c0e98";
+//    private static String pwd = "888888";
+
+    // 正式环境
+    private static String uid = "crm";
     private static String dbId = "613704993c0e98";
     private static String pwd = "888888";
+
+    // 11-9开发
+//    private static String uid = "crm";
+//    private static String dbId = "6189d1a09f4efb";
+//    private static String pwd = "888888";
+
     private static int lang = 2052;
 
     private static Map map = new HashMap();

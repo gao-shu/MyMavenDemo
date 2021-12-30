@@ -1,5 +1,3 @@
-import cn.hutool.core.date.DateTime;
-import cn.hutool.core.date.DateUtil;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -29,12 +27,12 @@ public class demo01 {
     public boolean equals(Object obj) {
         return super.equals(obj);
     }
-    
+
     @Test
     public void demo2(){
 
     }
-    
+
     @Test
     public void demo5(){
         String a = "[[{\"Result\":{\"ResponseStatus\":{\"ErrorCode\":500,\"IsSuccess\":false,\"Errors\":[{\"FieldName\":null,\"Message\":\"会话信息已丢失，请重新登录\",\"DIndex\":0}],\"SuccessEntitys\":[],\"SuccessMessages\":[],\"MsgCode\":1}}}]]";
@@ -50,10 +48,10 @@ public class demo01 {
         Date date = new Date();
         System.out.println(date);
 
-        DateTime dateTime = DateUtil.beginOfDay(DateUtil.date());
-        System.out.println(DateUtil.now());
+//        DateTime dateTime = DateUtil.beginOfDay(DateUtil.date());
+//        System.out.println(DateUtil.now());
     }
-    
+
     @Test
     public void demo7(){
         String s = String.format("%s不错", "今天");

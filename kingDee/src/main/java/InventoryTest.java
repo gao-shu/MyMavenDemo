@@ -1,8 +1,6 @@
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 
-import java.util.List;
-
 /**
  * @Title: CustomerTest
  * @Description: 客户测试
@@ -193,20 +191,21 @@ public class InventoryTest {
             String sFormId = "";
             String sContent = "{\n" +
                     "    \"FormId\": \"STK_Inventory\",\n" +
-                    "    \"FieldKeys\": \"FMaterialName, FMaterialId.FNumber, FBaseUnitId.FName, FMaterialId.FDescription," +
-                    "   FMaterialId.FCreateDate, FMaterialId.FModifyDate, FBaseQty, FMaterialId.FNETWEIGHT," +
-                    "   FStockName, FStockId.FNumber, FStockOrgId, FStockOrgId.FNumber, FStockStatusId, FMaterialId.FCreatorId, FMaterialId\",\n" +
+                    "    \"FieldKeys\": \"FMaterialName, FMaterialId.FNumber, FBaseUnitId.FName, FMaterialId.FDescription, FMaterialId.FCreateDate, " +
+                    "FMaterialId.FModifyDate, FBaseQty, FMaterialId.FNETWEIGHT, FStockName, FStockId.FNumber,  FStockOrgId, FStockOrgId.FNumber, " +
+                    "FStockId, FMaterialId, FStockStatusId.FName,FStockStatusId \",\n" +
 //                    "    \"FieldKeys\": \"FMaterialName,FBaseUnitId.FName, FSecUnitId.FName\",\n" +
 //                    "    \"FilterString\": \"\",\n" +
 //                    "    \"FilterString\": \"FStockStatusId = '100098' \",\n" +
-                    "    \"FilterString\": \" FStockStatusId = '10000' and FMaterialId.FNumber = '0101010100000001' \",\n" +
+                    "    \"FilterString\": \" FStockStatusId = '10000' and FMaterialId.FNumber = 'TCH00218' \",\n" +
+//                    "    \"FilterString\": \" FMaterialName = '1608塑钢扣（2000个）' \",\n" +
                     "    \"OrderString\": \"\",\n" +
                     "    \"TopRowCount\": 0,\n" +
                     "    \"StartRow\": 0,\n" +
                     "    \"Limit\": 0\n" +
                     "}";
             String result = InvokeHelper.ViewList(sFormId, sContent);
-            List<List> ts = JSONUtil.toList(JSONUtil.parseArray(result), List.class);
+//            List<List> ts = JSONUtil.toList(JSONUtil.parseArray(result), List.class);
 //            System.out.println(ts);
             System.out.println("hola success");
         }

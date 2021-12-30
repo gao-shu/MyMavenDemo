@@ -193,10 +193,11 @@ public class BillpayableTest1 {
             String sFormId = "";
             String sContent = "{\n" +
                     "    \"FormId\": \"CN_BILLRECEIVABLE\",\n" +
-                    "    \"FieldKeys\": \"FBillNo,FBILLNUMBER,FDUEDATE,FPARAMOUNTFOR,FPAYORGID\",\n" +
+                    "    \"FieldKeys\": \"FBillNo,FBILLNUMBER,FDUEDATE,FPARAMOUNTFOR,FPAYORGID,FCONTACTUNIT\",\n" +
                     "    \"FilterString\": \"\",\n" +
-                    "    \"FilterString\": \"FDocumentStatus = 'C'  and FPAYORGID = '100098' and FRECEIVEID is null and FCONTACTUNIT = 115323\",\n" +
-                    "    \"FilterString\": \"FDocumentStatus = 'C'  and FPAYORGID = '100098' and FRECEIVEID is null and and FCONTACTUNIT = 115372 \",\n" +
+                    "    \"FilterString\": \"FDocumentStatus = 'C'  and FPAYORGID = '100091' and FRECEIVEID is null \",\n" +
+//                    "    \"FilterString\": \"FDocumentStatus = 'C'  and FPAYORGID = '100098' and FRECEIVEID is null and FCONTACTUNIT = 115323\",\n" +
+//                    "    \"FilterString\": \"FDocumentStatus = 'C'  and FPAYORGID = '100098' and FRECEIVEID is null and and FCONTACTUNIT = 115372 \",\n" +
                     "    \"OrderString\": \"\",\n" +
                     "    \"TopRowCount\": 0,\n" +
                     "    \"StartRow\": 0,\n" +

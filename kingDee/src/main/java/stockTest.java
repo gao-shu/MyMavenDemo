@@ -195,6 +195,8 @@ public class stockTest {
                     "    \"FormId\": \"BD_STOCK\",\n" +
                     "    \"FieldKeys\": \"FStockId,FDocumentStatus,FForbidStatus,FName,FNumber,FUseOrgId,FUseOrgId.Fnumber\",\n" +
                     "    \"FilterString\": \"\",\n" +
+//                    "    \"FilterString\": \"FDocumentStatus = 'C'\",\n" +
+                    "    \"FilterString\": \"FForbidStatus = 'A' and FDocumentStatus = 'C'\",\n" +
 //                    "    \"FilterString\": \"FDocumentStatus = 'C' and  FUseOrgId = '234234'\",\n" +
                     "    \"OrderString\": \"\",\n" +
                     "    \"TopRowCount\": 0,\n" +
@@ -203,7 +205,6 @@ public class stockTest {
                     "}";
             String result = InvokeHelper.ViewList(sFormId, sContent);
             List<List> ts = JSONUtil.toList(JSONUtil.parseArray(result), List.class);
-            ts.forEach(list -> System.out.println(list.get(0)+""+list.get(1)));
             System.out.println(ts);
             System.out.println("hola success");
         }

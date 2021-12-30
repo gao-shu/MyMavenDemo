@@ -126,11 +126,11 @@ public class UserTest {
             String sFormId = "";
             String sContent = "{\n" +
                     "    \"FormId\": \"BD_Empinfo\",\n" +
-                    "    \"FieldKeys\": \"FMobile,FCreateDate,FName,FNumber,FEmail,FUseOrgId,FPost.FName,FForbidStatus,FID,FPostDept,FPostDept.Fname,FWorkOrgId.Fnumber\",\n" +
+                    "    \"FieldKeys\": \"FMobile,FCreateDate,FName,FNumber,FEmail,FUseOrgId,FPost.FName,FForbidStatus,FID,FPostDept,FPostDept.Fname,FWorkOrgId.Fnumber,FPostDept.FNumber\",\n" +
                     "    \"FilterString\": \" \",\n" +
-//                    "    \"FilterString\": \" FName = '赵鹏'\",\n" +
+                    "    \"FilterString\": \" FName = '栾洪宾'\",\n" +
 //                    "    \"FilterString\": \" FOperatorType_ETY='XSY'\",\n" +
-                    "    \"FilterString\": \" FForbidStatus='A' and FDocumentStatus = 'C' and FName = '李振'\",\n" +
+//                    "    \"FilterString\": \" FForbidStatus='A' and FDocumentStatus = 'C' and FName = '李振'\",\n" +
                     "    \"OrderString\": \"\",\n" +
                     "    \"TopRowCount\": 0,\n" +
                     "    \"StartRow\": 0,\n" +

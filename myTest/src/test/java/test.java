@@ -1,8 +1,14 @@
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.thread.ConcurrencyTester;
+import cn.hutool.core.thread.ThreadUtil;
+import cn.hutool.core.util.RandomUtil;
+import cn.hutool.http.HttpRequest;
+import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONUtil;
+import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
 import java.util.*;
@@ -111,4 +117,86 @@ public class test {
        strings.forEach(s -> System.out.println(s));
    }
 
+//    private BigDecimal num;
+//   @Test
+//   public void demo10(){
+//
+//       BigDecimal oldDeliveryNum = BigDecimal.ZERO;
+//       BigDecimal b = BigDecimal.ZERO;
+//       BigDecimal deliveryNum = (oldDeliveryNum.subtract(oldCrmContractDelivery.getNum())).add(crmContractDelivery.getNum());
+////       System.out.println(bigDecimal.setScale(4));
+//   }
+
+    @Test
+    public void demo10(){
+        ConcurrencyTester concurrencyTester = ThreadUtil.concurrencyTest(5, () -> {
+            saveCustomer();
+        });
+    }
+
+    public void saveCustomer(){
+        String url = "http://127.0.0.1:8443/crmCustomer/add";
+        String json = "{\"entity\":{\"num\":\"\",\"customerName\":\""+ RandomUtil.getRandom() +"\",\"fgroupId\":\"\",\"ownerUserId\":17558,\"mobile\":\"\",\"telephone\":\"\",\"salesVolume\":\"\",\"peopleNum\":\"\",\"demandAmount\":\"\",\"nextTime\":\"\",\"remark\":\"\",\"address\":\"河南省,洛阳市,老城区\",\"detailAddress\":\"洛阳市老城区兴华街中州人民医院东侧约170米老城十字街夜市\",\"location\":\"洛阳市老城区兴华街中州人民医院东侧约170米老城十字街夜市\",\"lng\":112.48526950037781,\"lat\":34.689474324251215},\"field\":[{\"fieldName\":\"source\",\"fieldType\":2,\"name\":\"客户来源\",\"type\":3,\"fieldId\":1101828,\"value\":\"\"},{\"fieldName\":\"industry\",\"fieldType\":2,\"name\":\"客户行业\",\"type\":3,\"fieldId\":1101832,\"value\":\"\"},{\"fieldName\":\"level\",\"fieldType\":2,\"name\":\"客户级别\",\"type\":3,\"fieldId\":1101833,\"value\":\"\"},{\"fieldName\":\"fliedJeqgso\",\"fieldType\":0,\"name\":\"联系人姓名\",\"type\":1,\"fieldId\":1101976,\"value\":\"联系人\"},{\"fieldName\":\"fliedDncmme\",\"fieldType\":0,\"name\":\"部门\",\"type\":12,\"fieldId\":1102051,\"value\":\"\"},{\"fieldName\":\"fliedEmxwgd\",\"fieldType\":0,\"name\":\"明细表格\",\"type\":45,\"fieldId\":1102061,\"value\":[]}]}";
+        String result = HttpRequest.post(url)
+                .header("Admin-Token", "84b4336f89544d93a8176659554e9c8f")
+                .body(json)
+                .timeout(20000)
+                .execute().body();
+    }
+
+
+    @Test
+    public void demo11(){
+        String url = "http://127.0.0.1:8443/crmKingdee/queryListWarehouse";
+//        String json = "{\"entity\":{\"num\":\"\",\"customerName\":\""+ RandomUtil.getRandom() +"\",\"fgroupId\":\"\",\"ownerUserId\":17558,\"mobile\":\"\",\"telephone\":\"\",\"salesVolume\":\"\",\"peopleNum\":\"\",\"demandAmount\":\"\",\"nextTime\":\"\",\"remark\":\"\",\"address\":\"河南省,洛阳市,老城区\",\"detailAddress\":\"洛阳市老城区兴华街中州人民医院东侧约170米老城十字街夜市\",\"location\":\"洛阳市老城区兴华街中州人民医院东侧约170米老城十字街夜市\",\"lng\":112.48526950037781,\"lat\":34.689474324251215},\"field\":[{\"fieldName\":\"source\",\"fieldType\":2,\"name\":\"客户来源\",\"type\":3,\"fieldId\":1101828,\"value\":\"\"},{\"fieldName\":\"industry\",\"fieldType\":2,\"name\":\"客户行业\",\"type\":3,\"fieldId\":1101832,\"value\":\"\"},{\"fieldName\":\"level\",\"fieldType\":2,\"name\":\"客户级别\",\"type\":3,\"fieldId\":1101833,\"value\":\"\"},{\"fieldName\":\"fliedJeqgso\",\"fieldType\":0,\"name\":\"联系人姓名\",\"type\":1,\"fieldId\":1101976,\"value\":\"联系人\"},{\"fieldName\":\"fliedDncmme\",\"fieldType\":0,\"name\":\"部门\",\"type\":12,\"fieldId\":1102051,\"value\":\"\"},{\"fieldName\":\"fliedEmxwgd\",\"fieldType\":0,\"name\":\"明细表格\",\"type\":45,\"fieldId\":1102061,\"value\":[]}]}";
+        String json = "";
+        HttpUtil.post(url, json);
+    }
+
+    @Test
+    public void demo12(){
+        ArrayList<Integer> aa = new ArrayList<>();
+        aa.add(1);
+        aa.add(2);
+        aa.add(3);
+        for (Integer integer : aa) {
+            for (Integer integer1 : aa) {
+                if (integer > integer1) {
+                    continue;
+                }
+                System.out.println("integer1"+integer1);
+            }
+            System.out.println("integer"+integer);
+        }
+    }
+
+    @Test
+    public void demo13(){
+        ArrayList<Integer> list1 = new ArrayList<>();
+        ArrayList<Integer> list2 = new ArrayList<>();
+        list1.add(1);
+        list1.add(2);
+        list1.add(3);
+        list2.add(3);
+        list2.add(4);
+        list2.add(5);
+        Collection<Integer> result2 = CollectionUtil.union(list1, list2);
+        System.out.println(list2+""+list1+"并集"+result2);
+        Collection<Integer> result3 = CollectionUtil.intersection(list1, list2);
+        System.out.println(list2+""+list1+"交集"+result3);
+        Collection<Integer> result4 = CollectionUtil.subtractToList(list1, list2);
+        System.out.println(list2+""+list1+"交集"+result4);
+        List<Integer> result5 = CollectionUtil.subtractToList(list2, list1);
+        System.out.println(list2+""+list1+"交集"+result5);
+        Collection<Integer> result6 = CollectionUtil.subtract(list2, list1);
+        System.out.println(list2+""+list1+"交集"+result6);
+
+
+    }
+
+    @Test
+    public void demo14(){
+        String s = "[{children=[{children=[{label=A1-1, value=A1-1}, {label=A1-2, value=A1-2}, {label=A2-3, value=A2-3}], label=A1, value=A1}, {children=[{label=A2-1, value=A2-1}, {label=A2-2, value=A2-2}, {label=A2-3, value=A2-3}], label=A2, value=A2}, {children=[{label=A3-1, value=A3-1}, {label=A3-2, value=A3-2}, {label=A3-3, value=A3-3}], label=A3, value=A3}], label=A, value=A}, {children=[{label=A1-1, value=A1-1}, {label=A1-2, value=A1-2}, {label=A2-3, value=A2-3}], label=A1, value=A1}, {label=A2-3, value=A2-3}]";
+        Object parse = JSONObject.parse(s);
+    }
 }
