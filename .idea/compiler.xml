@@ -24,7 +24,6 @@
         <module name="gaoshu_blog" />
         <module name="java-shunfeng-fengqiao" />
         <module name="spring-boot-learning" />
-        <module name="sfservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -41,6 +40,7 @@
       <module name="oh-my-email-master" target="8" />
       <module name="RedisUtil" target="8" />
       <module name="servlet" target="1.5" />
+      <module name="sfservice" target="1.5" />
       <module name="spring-boot-mybtis-plus" target="1.8" />
       <module name="spring-boot-selenium" target="1.8" />
       <module name="springboot01" target="1.8" />

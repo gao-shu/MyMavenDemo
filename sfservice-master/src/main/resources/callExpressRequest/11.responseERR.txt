@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<Response>
-    <success>false</success>
-    <msg>订单状态接收异常</msg>
-</Response>
