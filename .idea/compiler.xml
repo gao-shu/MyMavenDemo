@@ -10,15 +10,21 @@
         <module name="spring-boot-Hutool" />
         <module name="spring-boot-knife4j" />
         <module name="spring-boot-redis" />
-        <module name="gaoshu_blog" />
-        <module name="spring-boot-learning" />
         <module name="kingDee" />
         <module name="spring-boot-mybatis" />
         <module name="spring-boot-mybatis-plus" />
+        <module name="my_task" />
         <module name="POI" />
         <module name="thymeleaf" />
+        <module name="spring-boot-shunfeng-fengqiao" />
+        <module name="spring-boot-timing-Quartz" />
         <module name="myTest" />
         <module name="spring-boot-swagger" />
+        <module name="spring-boot-timing-Scheduled" />
+        <module name="gaoshu_blog" />
+        <module name="java-shunfeng-fengqiao" />
+        <module name="spring-boot-learning" />
+        <module name="sfservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -47,6 +53,7 @@
       <module name="LuckyFrameWeb" options="-parameters" />
       <module name="gaoshu_blog" options="-parameters" />
       <module name="knife4j" options="-parameters" />
+      <module name="my_task" options="-parameters" />
       <module name="mybatis-plus" options="-parameters" />
       <module name="mybatis-plus-demo" options="-parameters" />
       <module name="spring-boot-Hutool" options="-parameters" />
@@ -57,7 +64,10 @@
       <module name="spring-boot-mybtis-plus" options="-parameters" />
       <module name="spring-boot-redis" options="-parameters" />
       <module name="spring-boot-selenium" options="-parameters" />
+      <module name="spring-boot-shunfeng-fengqiao" options="-parameters" />
       <module name="spring-boot-swagger" options="-parameters" />
+      <module name="spring-boot-timing-Quartz" options="-parameters" />
+      <module name="spring-boot-timing-Scheduled" options="-parameters" />
       <module name="springboot01" options="-parameters" />
       <module name="swagger-demo" options="-parameters" />
       <module name="swagger_test" options="-parameters" />

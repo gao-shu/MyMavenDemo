@@ -11,11 +11,9 @@
     <modules>
         <module>myTest</module>
         <module>POI</module>
-        <module>mybatis</module>
         <module>kingDee</module>
-        <module>RedisUtil</module>
-        <module>MyBatis-Plus</module>
         <module>spring-boot-Hutool</module>
+        <module>java-shunfeng-fengqiao</module>
     </modules>
 
     <!--    在build中配置resources，来防止我们资源导出失败的问题-->

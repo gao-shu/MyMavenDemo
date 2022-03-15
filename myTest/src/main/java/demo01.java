@@ -1,3 +1,4 @@
+import DemoEnum.DemoEnum;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -54,7 +55,8 @@ public class demo01 {
 
     @Test
     public void demo7(){
-        String s = String.format("%s不错", "今天");
-        System.out.println(s);
+        DemoEnum c3 = DemoEnum.C3;
+        System.out.println(c3.toString());
+        System.out.println(c3.name());
     }
 }

@@ -1,4 +1,5 @@
 import cn.hutool.core.collection.CollectionUtil;
+import cn.hutool.core.convert.Convert;
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.thread.ConcurrencyTester;
@@ -11,6 +12,8 @@ import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -198,5 +201,14 @@ public class test {
     public void demo14(){
         String s = "[{children=[{children=[{label=A1-1, value=A1-1}, {label=A1-2, value=A1-2}, {label=A2-3, value=A2-3}], label=A1, value=A1}, {children=[{label=A2-1, value=A2-1}, {label=A2-2, value=A2-2}, {label=A2-3, value=A2-3}], label=A2, value=A2}, {children=[{label=A3-1, value=A3-1}, {label=A3-2, value=A3-2}, {label=A3-3, value=A3-3}], label=A3, value=A3}], label=A, value=A}, {children=[{label=A1-1, value=A1-1}, {label=A1-2, value=A1-2}, {label=A2-3, value=A2-3}], label=A1, value=A1}, {label=A2-3, value=A2-3}]";
         Object parse = JSONObject.parse(s);
+    }
+
+    @Test
+    public void demo15(){
+//        DecimalFormat decimalFormat = new DecimalFormat("0.00");
+        System.out.println("erasdjfioa\r\njsdfop");
+//        BigDecimal bigDecimal = Convert.toBigDecimal(decimalFormat.format(0.145));
+//        System.out.println(bigDecimal);
+
     }
 }

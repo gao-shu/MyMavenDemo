@@ -21,9 +21,9 @@ public class ReceivablesTest {
 
     public static void main(String[] args) throws Exception {
 //        saveOrUpdate();
-        saveOrUpdate2();
+//        saveOrUpdate2();
 //        getOne();
-//        getList();
+        getList();
 //        getListTest();
 //        getListTest2();
 //        login(dbId, uid, pwd, lang);
@@ -259,7 +259,8 @@ public class ReceivablesTest {
             String sContent = "{\n" +
                     "    \"FormId\": \"AR_RECEIVEBILL\",\n" +
                     "    \"FieldKeys\": \"FBillNo,FSaleOrgId,FDocumentStatus,FCancelStatus,FCancelStatus\",\n" +
-                    "    \"FilterString\": \"\",\n" +
+//                    "    \"FilterString\": \"\",\n" +
+                    "    \"FilterString\": \"FID  = '117781'\",\n" +
                     "    \"OrderString\": \"\",\n" +
                     "    \"TopRowCount\": 0,\n" +
                     "    \"StartRow\": 0,\n" +

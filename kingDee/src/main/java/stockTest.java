@@ -197,6 +197,7 @@ public class stockTest {
                     "    \"FilterString\": \"\",\n" +
 //                    "    \"FilterString\": \"FDocumentStatus = 'C'\",\n" +
                     "    \"FilterString\": \"FForbidStatus = 'A' and FDocumentStatus = 'C'\",\n" +
+                    "    \"FilterString\": \"FForbidStatus = 'A' and FDocumentStatus = 'C'\",\n" +
 //                    "    \"FilterString\": \"FDocumentStatus = 'C' and  FUseOrgId = '234234'\",\n" +
                     "    \"OrderString\": \"\",\n" +
                     "    \"TopRowCount\": 0,\n" +

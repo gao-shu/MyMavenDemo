@@ -1,9 +1,12 @@
+import cn.hutool.core.convert.Convert;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 
+import java.util.List;
+
 /**
  * @Title: CustomerTest
- * @Description: 客户测试
+ * @Description: 库存测试
  * @author: gaoshu
  * @date: 2021/8/11 14:50
  */
@@ -191,21 +194,30 @@ public class InventoryTest {
             String sFormId = "";
             String sContent = "{\n" +
                     "    \"FormId\": \"STK_Inventory\",\n" +
-                    "    \"FieldKeys\": \"FMaterialName, FMaterialId.FNumber, FBaseUnitId.FName, FMaterialId.FDescription, FMaterialId.FCreateDate, " +
-                    "FMaterialId.FModifyDate, FBaseQty, FMaterialId.FNETWEIGHT, FStockName, FStockId.FNumber,  FStockOrgId, FStockOrgId.FNumber, " +
-                    "FStockId, FMaterialId, FStockStatusId.FName,FStockStatusId \",\n" +
+                    "    \"FieldKeys\": \"FMaterialName, FMaterialId.FNumber, FBaseUnitId.FName, FMaterialId.FDescription, " +
+                    "FMaterialId.FCreateDate, FMaterialId.FModifyDate, FBaseQty, FMaterialId.FNETWEIGHT, FStockName, FStockId.FNumber, " +
+                    " FStockOrgId, FStockOrgId.FNumber,FStockId, FMaterialId\",\n" +
 //                    "    \"FieldKeys\": \"FMaterialName,FBaseUnitId.FName, FSecUnitId.FName\",\n" +
 //                    "    \"FilterString\": \"\",\n" +
 //                    "    \"FilterString\": \"FStockStatusId = '100098' \",\n" +
-                    "    \"FilterString\": \" FStockStatusId = '10000' and FMaterialId.FNumber = 'TCH00218' \",\n" +
-//                    "    \"FilterString\": \" FMaterialName = '1608塑钢扣（2000个）' \",\n" +
+//                    "    \"FilterString\": \" FStockStatusId = '10000' and FMaterialId.FNumber = 'TCH00218' \",\n" +
+//                    "    \"FilterString\": \" FStockStatusId = '10000'  \",\n" +
+                    "    \"FilterString\": \" FMaterialName like '%白吨包80*80*90四吊%' \",\n" +
+//                    "    \"FilterString\": \" FMaterialId.FNumber = '0201010101010008' \",\n" +
+//                    "    \"FilterString\": \" FStockId = '107805' and FMaterialId = '102752' \",\n" +
                     "    \"OrderString\": \"\",\n" +
                     "    \"TopRowCount\": 0,\n" +
                     "    \"StartRow\": 0,\n" +
                     "    \"Limit\": 0\n" +
                     "}";
             String result = InvokeHelper.ViewList(sFormId, sContent);
-//            List<List> ts = JSONUtil.toList(JSONUtil.parseArray(result), List.class);
+            List<List> ts = JSONUtil.toList(JSONUtil.parseArray(result), List.class);
+            for (List t : ts) {
+                if (Convert.toLong(t.get(6)) < 1) {
+                    System.out.println(123);
+                }
+
+            }
 //            System.out.println(ts);
             System.out.println("hola success");
         }

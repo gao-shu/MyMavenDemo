@@ -9,6 +9,7 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * <p>
@@ -50,6 +51,9 @@ public class Person implements Serializable {
 
     @ApiModelProperty(value = "0男，1女")
     private Boolean sexBit;
+
+    @ApiModelProperty(value = "312312")
+    private BigDecimal money;
 
 
 }

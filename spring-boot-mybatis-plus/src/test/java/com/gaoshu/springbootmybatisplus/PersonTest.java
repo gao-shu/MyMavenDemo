@@ -15,7 +15,7 @@ import java.util.List;
  * @author: gaoshu
  * @date: 2021/12/22 19:45
  */
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = SpringBootMybatisPlusApplication.class)
 public class PersonTest {
 
     @Autowired

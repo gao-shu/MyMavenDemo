@@ -1,8 +1,12 @@
+import cn.hutool.core.io.FileUtil;
+import cn.hutool.core.io.IoUtil;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
 import java.util.List;
 
 /**
@@ -132,7 +136,10 @@ public class ProductTest {
                     "    \"FieldKeys\": \"FName,FNumber,FBaseUnitId.Fname,FBaseUnitId.Fnumber,FDescription,FCreatorId,FCreateDate,FModifyDate,FNETWEIGHT,FMATERIALID,FUseOrgId,FUseOrgId.Fnumber,FUseOrgId.Fname\",\n" +
 //                    "    \"FilterString\": \" FMATERIALID = 110449\",\n" +
 //                    "    \"FilterString\": \" FName = '40*62灰色60克'\",\n" +
-                    "    \"FilterString\": \" FUseOrgId = 1 and FForbidStatus = 'A' and FCreatorId = '101465'\",\n" +
+//                    "    \"FilterString\": \" FName = '40*62增白55克'\",\n" +
+//                    "    \"FilterString\": \" FName = '50×82增白55g覆膜'\",\n" +
+//                    "    \"FilterString\": \" FUseOrgId = 1 and FForbidStatus = 'A' and FCreatorId = '101465'\",\n" +
+                    "    \"FilterString\": \"  FUseOrgId = 1  and FForbidStatus = 'A' and FDocumentStatus = 'C'\",\n" +
                     "    \"OrderString\": \"\",\n" +
                     "    \"TopRowCount\": 0,\n" +
                     "    \"StartRow\": 0,\n" +
@@ -140,6 +147,10 @@ public class ProductTest {
                     "}";
             String products = InvokeHelper.ViewList(sFormId, sContent);
             List<List> productsList = JSONUtil.toList(JSONUtil.parseArray(products), List.class);
+//            File file = new File("C:\\Users\\Administrator\\Desktop\\1.txt");
+//            FileUtil.cleanEmpty(file);
+//            FileUtil.appendUtf8String(products, file);
+
             System.out.println("hola success");
         }
     }
