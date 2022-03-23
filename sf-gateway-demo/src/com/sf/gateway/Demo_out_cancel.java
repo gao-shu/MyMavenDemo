@@ -22,7 +22,7 @@ import java.net.URLEncoder;
  * @author 01377259 
  * 2018年9月27日
  */
-public class Demo_outbound {
+public class Demo_out_cancel {
 
 	public static final int TIMEOUT = 30000;
 	public static final String CHARSET = "UTF-8";
@@ -34,7 +34,7 @@ public class Demo_outbound {
 	public static final String AES256_KEY = "alcTaVtXvKtuOfc9ZyC8rEc8j6Hzogmg";// key
 	public static final String MACSHA_512 = "W0b4XVyNzMaO9u0QZ3KwilcVbeAv6sN6";// 盐
 //	public static final String REQUES_URL = "https://scs-oms2-bspwms.sit.sf-express.com:45316/index.do?appId=111111&method=inbound&source=sfdemo&appToken=sfdemoapptoken&v=1.0&timestamp=123456789&signMethod=md5&sign=223&deviceToken=444&userToken=sfdemotoken&format=json";
-	public static final String REQUES_URL = "https://scs-oms2-bspwms.sit.sf-express.com:45316/index.do?appId=111111&method=outbound&source=sfdemo&appToken=sfdemoapptoken&v=1.0&timestamp=123456789&signMethod=md5&sign=223&deviceToken=444&userToken=sfdemotoken&format=json";
+	public static final String REQUES_URL = "https://scs-oms2-bspwms.sit.sf-express.com:45316/index.do?appId=111111&method=canceltransport&source=sfdemo&appToken=sfdemoapptoken&v=1.0&timestamp=123456789&userToken=sfdemotoken";
 	/**
 	 * 示例
 	 * 
@@ -120,175 +120,17 @@ public class Demo_outbound {
 	public static void main(String[] args) throws Exception {
 //		String source = "hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容:hello world!!@#$%^&*我中中文内容: page:";
 		String source = "{\n" +
-				"    \"carrierCode\":\"CP\",\n" +
-				"    \"carrierServiceType\":\"SE0004\",\n" +
-				"    \"erpOrder\":\"68121638522905\",\n" +
-				"    \"orderTime\":\"2018-10-09 12:01:15\",\n" +
-				"    \"sfOrderType\":\"PO\",\n" +
-				"    \"warehouseCode\":\"P024CSB\",\n" +
-				"    \"remark\":\"订单备注：不要辣\",\n" +
-				"    \"paymentTypeCode\":\"PR_ACCOUNT\",\n" +
-				"    \"deliveryDate\":\"2018-10-15 12:01:15\",\n" +
-				"    \"customer\":{\n" +
-				"        \"companyCode\":\"7550137864\",\n" +
-				"        \"customerMonthlyCard\":\"7550760040\"\n" +
-				"    },\n" +
-				"    \"shipper\":{\n" +
-				"        \"shipperContactName\":\"李小明\",\n" +
-				"        \"shipperContactPhone\":\"10086\",\n" +
-				"        \"shipperContactTel\":\"18645787890\",\n" +
-				"        \"shipperContactEmail\":\"ling.lina@126.com\",\n" +
-				"        \"shipperCountryName\":\"中国\",\n" +
-				"        \"shipperCityName\":\"梅州市\",\n" +
-				"        \"shipperDistrictName\":\"平远县\",\n" +
-				"        \"shipperRegionName\":\"大柘镇\",\n" +
-				"        \"shipperLocationName\":\"广东省梅州市平远县大柘镇光明乳业分公司\",\n" +
-				"        \"shipperCompany\":\"深圳光明乳业有限公司平远分公司\"\n" +
-				"    },\n" +
-				"    \"consignee\":{\n" +
-				"        \"consigneeCityName\":\"深圳市\",\n" +
-				"        \"consigneeContactName\":\"莫怡然\",\n" +
-				"        \"consigneeContactPhone\":\"67627773\",\n" +
-				"        \"consigneeLocationName\":\"广东省深圳市龙岗区横岗街道红棉4路森城工业区A2栋\",\n" +
-				"        \"consigneeProvinceName\":\"广东省\",\n" +
-				"        \"consigneeCountryName\":\"中国\",\n" +
-				"        \"consigneeContactEmail\":\"shangbai@123.com\",\n" +
-				"        \"consigneeContactZipCode\":\"7553121251\",\n" +
-				"        \"consigneeContactTel\":\"1524545412222\",\n" +
-				"        \"consigneeDistrictName\":\"龙岗\",\n" +
-				"        \"consigneeRegionName\":\"龙岗区\",\n" +
-				"        \"consigneeCompany\":\"瑞意森城有限公司\"\n" +
-				"    },\n" +
-
-				"    \"detail\":[\n" +
-				"        {\n" +
-				"            \"erpOrderLineNum\":1,\n" +
-				"            \"skuNo\":\"123456658572\",\n" +
-				"            \"skuName\":\"Topfer特福芬 新妈妈茶（混合花草冲饮） 200g\",\n" +
-				"            \"packageUnitCode\":\"件\",\n" +
-				"            \"lot\":\"1505444444\",\n" +
-				"            \"quantity\":10\n" +
-				"        }\n" +
-				"    ]\n" +
+				"    \"erpOrder\":\"68121638522904\",\n" +
+				"    \"receiptId\":\"OB786123064126189605-100\",\n" +
+				"    \"companyCode\":\"OMS2TEST\",\n" +
+				"    \"warehouserCode\":\"010VB\",\n" +
+				"    \"sourceCode\":\"sfdemo\"\n" +
 				"}";
-
-		//		String source = "{\n" +
-//				"    \"carrierCode\":\"CP\",\n" +
-//				"    \"carrierServiceType\":\"SE0004\",\n" +
-//				"    \"erpOrder\":\"68121638522904\",\n" +
-//				"    \"orderTime\":\"2018-10-09 12:01:15\",\n" +
-//				"    \"sfOrderType\":\"PO\",\n" +
-//				"    \"warehouseCode\":\"P024CSB\",\n" +
-//				"    \"remark\":\"订单备注：不要辣\",\n" +
-//				"    \"paymentTypeCode\":\"PR_ACCOUNT\",\n" +
-//				"    \"deliveryDate\":\"2018-10-15 12:01:15\",\n" +
-//				"    \"customer\":{\n" +
-//				"        \"companyCode\":\"7550137864\",\n" +
-//				"        \"customerMonthlyCard\":\"7550760040\"\n" +
-//				"    },\n" +
-//				"    \"shipper\":{\n" +
-//				"        \"shipperContactName\":\"李小明\",\n" +
-//				"        \"shipperContactPhone\":\"10086\",\n" +
-//				"        \"shipperContactTel\":\"18645787890\",\n" +
-//				"        \"shipperContactEmail\":\"ling.lina@126.com\",\n" +
-//				"        \"shipperCountryName\":\"中国\",\n" +
-//				"        \"shipperCityName\":\"梅州市\",\n" +
-//				"        \"shipperDistrictName\":\"平远县\",\n" +
-//				"        \"shipperRegionName\":\"大柘镇\",\n" +
-//				"        \"shipperLocationName\":\"广东省梅州市平远县大柘镇光明乳业分公司\",\n" +
-//				"        \"shipperCompany\":\"深圳光明乳业有限公司平远分公司\"\n" +
-//				"    },\n" +
-//				"    \"consignee\":{\n" +
-//				"        \"consigneeCityName\":\"深圳市\",\n" +
-//				"        \"consigneeContactName\":\"莫怡然\",\n" +
-//				"        \"consigneeContactPhone\":\"67627773\",\n" +
-//				"        \"consigneeLocationName\":\"广东省深圳市龙岗区横岗街道红棉4路森城工业区A2栋\",\n" +
-//				"        \"consigneeProvinceName\":\"广东省\",\n" +
-//				"        \"consigneeCountryName\":\"中国\",\n" +
-//				"        \"consigneeContactEmail\":\"shangbai@123.com\",\n" +
-//				"        \"consigneeContactZipCode\":\"7553121251\",\n" +
-//				"        \"consigneeContactTel\":\"1524545412222\",\n" +
-//				"        \"consigneeDistrictName\":\"龙岗\",\n" +
-//				"        \"consigneeRegionName\":\"龙岗区\",\n" +
-//				"        \"consigneeCompany\":\"瑞意森城有限公司\"\n" +
-//				"    },\n" +
-//				"    \"addedService\":[\n" +
-//				"        {\n" +
-//				"            \"serviceCode\":\"VA0021\",\n" +
-//				"            \"value\":\"1000\"\n" +
-//				"        },\n" +
-//				"        {\n" +
-//				"            \"serviceCode\":\"VA0003\",\n" +
-//				"            \"value\":\"Y\"\n" +
-//				"        },\n" +
-//				"        {\n" +
-//				"            \"serviceCode\":\"VA0042\",\n" +
-//				"            \"value\":\"1000\"\n" +
-//				"        },\n" +
-//				"        {\n" +
-//				"            \"serviceCode\":\"VA0019\",\n" +
-//				"            \"value\":\"4000\"\n" +
-//				"        }\n" +
-//				"    ],\n" +
-//				"    \"detail\":[\n" +
-//				"        {\n" +
-//				"            \"erpOrderLineNum\":1,\n" +
-//				"            \"skuNo\":\"6422731233\",\n" +
-//				"            \"skuName\":\"Topfer特福芬 新妈妈茶（混合花草冲饮） 200g\",\n" +
-//				"            \"packageUnitCode\":\"件\",\n" +
-//				"            \"lot\":\"1505444444\",\n" +
-//				"            \"quantity\":10\n" +
-//				"        },\n" +
-//				"        {\n" +
-//				"            \"erpOrderLineNum\":2,\n" +
-//				"            \"skuNo\":\"8139526156\",\n" +
-//				"            \"skuName\":\"WEI-I味一 旗鱼松 105g\",\n" +
-//				"            \"packageUnitCode\":\"包\",\n" +
-//				"            \"lot\":\"1505444444\",\n" +
-//				"            \"quantity\":10\n" +
-//				"        }\n" +
-//				"    ]\n" +
-//				"}";
-
-//		String source = "{\n" +
-//				"    \"erpOrder\":\"Z0001001\",\n" +
-//				"    \"shipper\":{\n" +
-//				"        \"shipperContactName\":\"李四\",\n" +
-//				"        \"shipperContactPhone\":\"13200000001\"\n" +
-//				"    },\n" +
-//				"    \"consignee\":{\n" +
-//				"        \"consigneeContactPhone\":\"13200000000\",\n" +
-//				"        \"consigneeProvinceName\":\"河南省\",\n" +
-//				"        \"consigneeDistrictName\":\"\",\n" +
-//				"        \"consigneeLocationName\":\"正大国际西区CPL\",\n" +
-//				"        \"consigneeContactName\":\"张三同学\",\n" +
-//				"        \"consigneeCityName\":\"洛阳市\"\n" +
-//				"    },\n" +
-//				"    \"warehouseCode\":\"010VB\",\n" +
-//				"    \"sfOrderType\":\"PO\",\n" +
-//				"    \"packageNote\":\"SE0004\",\n" +
-//				"    \"orderTime\":\"2022-03-23 14:13:57\",\n" +
-//				"    \"carrierCode\":\"CP\",\n" +
-//				"    \"carrierServiceType\":\"SE0113\",\n" +
-//				"    \"detailList\":[\n" +
-//				"        {\n" +
-//				"            \"quantity\":10,\n" +
-//				"            \"skuName\":\"Topfer特福芬 新妈妈茶（混合花草冲饮） 200g\",\n" +
-//				"            \"skuNo\":\"6422731233\"\n" +
-//				"        }\n" +
-//				"    ],\n" +
-//				"    \"customer\":{\n" +
-//				"        \"companyCode\":\"OMS2TEST\",\n" +
-//				"        \"customerMonthlyCard\":\"7550612539\"\n" +
-//				"    }\n" +
-//				"}";
-
-
-		Demo_outbound.demo(source);
+		Demo_out_cancel.demo(source);
 	}
 }
 
-class RequestBean3 {
+class RequestBean8 {
 	
 	private Request param_json;
 
@@ -298,7 +140,7 @@ class RequestBean3 {
 	public void setParamJson(Request paramJson) {
 		this.param_json = paramJson;
 	}
-	public RequestBean3(Request param_json) {
+	public RequestBean8(Request param_json) {
 		super();
 		this.param_json = param_json;
 	}

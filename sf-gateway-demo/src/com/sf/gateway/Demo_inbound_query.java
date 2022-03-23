@@ -119,9 +119,10 @@ public class Demo_inbound_query {
 	public static void main(String[] args) throws Exception {
 		String source = "{\n" +
 //				"    \"erpOrder\":\"11000853401289\",\n" +
-				"    \"erpOrder\":\"11000853401256\",\n" +
-				"    \"sfOrderNo\":\"11000853401256\",\n" +
-				"    \"companyCode\":\"7550057640\"\n" +
+//				"    \"erpOrder\":\"11000853401256\",\n" +
+				"    \"erpOrder\":\"11000853401261\",\n" +
+				"    \"sfOrderNo\":\"7550057640\",\n" +
+				"    \"companyCode\":\"OMS2TEST\"\n" +
 				"}";
 		Demo_inbound_query.demo(source);
 	}

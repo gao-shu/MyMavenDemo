@@ -1,3 +1,5 @@
+import Entity.Person;
+import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.convert.Convert;
 import cn.hutool.core.date.DateTime;
@@ -7,6 +9,7 @@ import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpUtil;
+import cn.hutool.json.JSON;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSONObject;
@@ -205,10 +208,24 @@ public class test {
 
     @Test
     public void demo15(){
-//        DecimalFormat decimalFormat = new DecimalFormat("0.00");
-        System.out.println("erasdjfioa\r\njsdfop");
-//        BigDecimal bigDecimal = Convert.toBigDecimal(decimalFormat.format(0.145));
-//        System.out.println(bigDecimal);
+        Person person = new Person();
+        person.setAge(2);
+        person.setName("张三");
+        person.setAddress("");
+        JSON json = JSONUtil.parse(person);
+        cn.hutool.json.JSONObject jsonObject = JSONUtil.parseObj(person, false);
+        System.out.println(json);
+        System.out.println(jsonObject);
+    }
 
+    @Test
+    public void demo16() throws InterruptedException {
+        DateTime date = DateUtil.date();
+        System.out.println(date);
+//        Thread.sleep(3000);
+        System.out.println(date.getTime());
+        System.out.println();
+        System.out.println(DateUtil.date(date.getTime()));
+        System.out.println(DateUtil.date(0));
     }
 }

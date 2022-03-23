@@ -35,7 +35,7 @@ public class Demo_inbound {
 
 	public static final String AES256_KEY = "alcTaVtXvKtuOfc9ZyC8rEc8j6Hzogmg";// key
 	public static final String MACSHA_512 = "W0b4XVyNzMaO9u0QZ3KwilcVbeAv6sN6";// 盐
-	public static final String REQUES_URL_0 = "https://scs-oms2-bspwms.sit.sf-express.com:45316/index.do?appId=111111&method=inbound&source=sfdemo&appToken=sfdemoapptoken&v=1.0&timestamp=123456789&userToken=sfdemotoken&format=json";
+	public static final String REQUES_URL_0 = "https://scs-oms2-bspwms.sit.sf-express.com:45316/index.do?appId=111111&method=inbound&source=sfdemo&appToken=sfdemoapptoken&v=1.0&timestamp=123456789&userToken=sfdemotoken";
 
 	/**
 	 * 示例
@@ -126,7 +126,7 @@ public class Demo_inbound {
 				"    \"orderTime\":\"2018-09-20 15:50:50\",\n" +
 				"    \"distributionType\":\"Y\",\n" +
 				"    \"tradePlatform\":\"JD\",\n" +
-				"    \"erpOrder\":\"11000853401260\",\n" +
+				"    \"erpOrder\":\"11000853401266\",\n" +
 				"    \"userDef1\":\"\",\n" +
 				"    \"item\":[\n" +
 				"        {\n" +
@@ -146,7 +146,8 @@ public class Demo_inbound {
 				"            \"expirationTime\":6,\n" +
 				"            \"price\":11,\n" +
 				"            \"qty\":\"2616\",\n" +
-				"            \"skuNo\":\"LF15050041001\",\n" +
+//				"            \"skuNo\":\"LF15050041001\",\n" +
+				"            \"skuNo\":\"123456658572\",\n" +
 				"            \"usetItemDef8\":\"\",\n" +
 				"            \"usetItemDef7\":\"\",\n" +
 				"            \"usetItemDef6\":\"\",\n" +

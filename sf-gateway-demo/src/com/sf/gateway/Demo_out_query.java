@@ -124,7 +124,7 @@ public class Demo_out_query {
 				"    \"sfOrderNo\":\"OB786123064126189605-100\",\n" +
 				"    \"companyCode\":\"7550137864\"\n" +
 				"}";
-		Demo_out_query.demo(source);
+		Demo_out_cancel.demo(source);
 	}
 }
 
