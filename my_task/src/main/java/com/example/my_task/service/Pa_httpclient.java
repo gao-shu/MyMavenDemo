@@ -111,7 +111,7 @@ public class Pa_httpclient {
                             DateUtil.isSameDay(DateUtil.date(), DateUtil.parse(object.get("TRADE_DATE").toString())) &&
                             object.get("DATE_TYPE").equals("申购")) {
                         list.add(object.get("SECURITY_NAME_ABBR").toString());
-                        System.out.println();
+                        System.out.println(list);
                     }
                 }
             }

@@ -17,7 +17,8 @@
         <module name="POI" />
         <module name="thymeleaf" />
         <module name="spring-boot-shunfeng-fengqiao" />
-        <module name="spring-boot-timing-Quartz" />
+        <module name="spring-boot-timing-Scheduled (1)" />
+        <module name="spring-boot-timing-Scheduled (2)" />
         <module name="myTest" />
         <module name="spring-boot-swagger" />
         <module name="spring-boot-timing-Scheduled" />
@@ -43,6 +44,7 @@
       <module name="sfservice" target="1.5" />
       <module name="spring-boot-mybtis-plus" target="1.8" />
       <module name="spring-boot-selenium" target="1.8" />
+      <module name="spring-boot-timing-Quartz" target="1.8" />
       <module name="springboot01" target="1.8" />
       <module name="swagger-demo" target="1.8" />
       <module name="swagger_test" target="1.8" />
@@ -68,6 +70,8 @@
       <module name="spring-boot-swagger" options="-parameters" />
       <module name="spring-boot-timing-Quartz" options="-parameters" />
       <module name="spring-boot-timing-Scheduled" options="-parameters" />
+      <module name="spring-boot-timing-Scheduled (1)" options="-parameters" />
+      <module name="spring-boot-timing-Scheduled (2)" options="-parameters" />
       <module name="springboot01" options="-parameters" />
       <module name="swagger-demo" options="-parameters" />
       <module name="swagger_test" options="-parameters" />
