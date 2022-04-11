@@ -1,7 +1,5 @@
 import Entity.Person;
-import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollectionUtil;
-import cn.hutool.core.convert.Convert;
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.thread.ConcurrencyTester;
@@ -15,8 +13,6 @@ import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -224,7 +220,7 @@ public class test {
         System.out.println(date);
 //        Thread.sleep(3000);
         System.out.println(date.getTime());
-        System.out.println();
+        System.out.println( RandomUtil.randomNumbers(5));
         System.out.println(DateUtil.date(date.getTime()));
         System.out.println(DateUtil.date(0));
     }

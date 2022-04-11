@@ -117,10 +117,13 @@ public class Demo_inbound {
 		return result;
 	}
 
+	//"sfOrderNo":"IB791755591612448947-100","extenSystemOrderNo":"11000853401266"
 	public static void main(String[] args) throws Exception {
 		String source = "{\n" +
 				"    \"supplierCode\":\"CARREFOUR\",\n" +
-				"    \"warehouseCode\":\"P024CSB\",\n" +
+				// 仓库编码
+//				"    \"warehouseCode\":\"P024CSB\",\n" +
+				"    \"warehouseCode\":\"010VB\",\n" +
 				"    \"sfOrderType\":\"PI\",\n" +
 				"    \"licensePlateNumber\":\"221\",\n" +
 				"    \"orderTime\":\"2018-09-20 15:50:50\",\n" +
@@ -146,8 +149,9 @@ public class Demo_inbound {
 				"            \"expirationTime\":6,\n" +
 				"            \"price\":11,\n" +
 				"            \"qty\":\"2616\",\n" +
+				// sku编码
 //				"            \"skuNo\":\"LF15050041001\",\n" +
-				"            \"skuNo\":\"123456658572\",\n" +
+				"            \"skuNo\":\"666666\",\n" +
 				"            \"usetItemDef8\":\"\",\n" +
 				"            \"usetItemDef7\":\"\",\n" +
 				"            \"usetItemDef6\":\"\",\n" +
@@ -171,8 +175,11 @@ public class Demo_inbound {
 				"    \"driver\":\"\",\n" +
 				"    \"expectDate\":\"2018-09-20 15:50:50\",\n" +
 				"    \"customer\":{\n" +
-				"        \"companyCode\":\"7550057640\",\n" +
-				"        \"customerMonthlyCard\":\"7550057640\"\n" +
+				// 货主编码，月结账号
+//				"        \"companyCode\":\"7550057640\",\n" +
+//				"        \"customerMonthlyCard\":\"7550057640\"\n" +
+				"        \"companyCode\":\"OMS2TEST\",\n" +
+				"        \"customerMonthlyCard\":\"7550612539\"\n" +
 				"    }\n" +
 				"}";
 		Demo_inbound.demo(source);

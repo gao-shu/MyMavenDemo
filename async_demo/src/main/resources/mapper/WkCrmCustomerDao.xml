@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="demotest.dao.WkCrmCustomerDao">
+    <resultMap type="demotest.entity.WkCrmCustomer" id="WkCrmCustomerMap">
+        <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+        <result property="customerName" column="customer_name" jdbcType="VARCHAR"/>
+        <result property="followup" column="followup" jdbcType="INTEGER"/>
+        <result property="isLock" column="is_lock" jdbcType="INTEGER"/>
+        <result property="nextTime" column="next_time" jdbcType="TIMESTAMP"/>
+        <result property="dealStatus" column="deal_status" jdbcType="INTEGER"/>
+        <result property="dealTime" column="deal_time" jdbcType="TIMESTAMP"/>
+        <result property="contactsId" column="contacts_id" jdbcType="INTEGER"/>
+        <result property="mobile" column="mobile" jdbcType="VARCHAR"/>
+        <result property="telephone" column="telephone" jdbcType="VARCHAR"/>
+        <result property="website" column="website" jdbcType="VARCHAR"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+        <result property="createUserId" column="create_user_id" jdbcType="INTEGER"/>
+        <result property="ownerUserId" column="owner_user_id" jdbcType="INTEGER"/>
+        <result property="roUserId" column="ro_user_id" jdbcType="VARCHAR"/>
+        <result property="rwUserId" column="rw_user_id" jdbcType="VARCHAR"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="location" column="location" jdbcType="VARCHAR"/>
+        <result property="detailAddress" column="detail_address" jdbcType="VARCHAR"/>
+        <result property="lng" column="lng" jdbcType="VARCHAR"/>
+        <result property="lat" column="lat" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="batchId" column="batch_id" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="lastTime" column="last_time" jdbcType="TIMESTAMP"/>
+        <result property="poolTime" column="pool_time" jdbcType="TIMESTAMP"/>
+        <result property="isReceive" column="is_receive" jdbcType="INTEGER"/>
+        <result property="lastContent" column="last_content" jdbcType="VARCHAR"/>
+        <result property="receiveTime" column="receive_time" jdbcType="TIMESTAMP"/>
+        <result property="preOwnerUserId" column="pre_owner_user_id" jdbcType="INTEGER"/>
+        <result property="num" column="num" jdbcType="VARCHAR"/>
+        <result property="dealCycleStart" column="deal_cycle_start" jdbcType="TIMESTAMP"/>
+        <result property="dealCycleEnd" column="deal_cycle_end" jdbcType="TIMESTAMP"/>
+        <result property="followUserId" column="follow_user_id" jdbcType="INTEGER"/>
+        <result property="noReceiveMoney" column="no_receive_money" jdbcType="NUMERIC"/>
+        <result property="dealCycle" column="deal_cycle" jdbcType="INTEGER"/>
+        <result property="addressId" column="address_id" jdbcType="INTEGER"/>
+        <result property="addressKd" column="address_kd" jdbcType="VARCHAR"/>
+        <result property="salesVolume" column="sales_volume" jdbcType="NUMERIC"/>
+        <result property="peopleNum" column="people_num" jdbcType="INTEGER"/>
+        <result property="demandAmount" column="demand_amount" jdbcType="NUMERIC"/>
+        <result property="fcustomerId" column="fcustomer_id" jdbcType="INTEGER"/>
+        <result property="orgId" column="org_id" jdbcType="INTEGER"/>
+        <result property="forgId" column="forg_id" jdbcType="INTEGER"/>
+        <result property="fgroupId" column="fgroup_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!-- 批量插入 -->
+    <insert id="insertBatch" keyProperty="customerId" useGeneratedKeys="true">
+        insert into test.wk_crm_customer(customer_name, followup, is_lock, next_time, deal_status, deal_time,
+        contacts_id, mobile, telephone, website, email, remark, create_user_id, owner_user_id, ro_user_id, rw_user_id,
+        address, location, detail_address, lng, lat, create_time, update_time, batch_id, status, last_time, pool_time,
+        is_receive, last_content, receive_time, pre_owner_user_id, num, deal_cycle_start, deal_cycle_end,
+        follow_user_id, no_receive_money, deal_cycle, address_id, address_kd, sales_volume, people_num, demand_amount,
+        fcustomer_id, org_id, forg_id, fgroup_id)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.customerName}, #{entity.followup}, #{entity.isLock}, #{entity.nextTime}, #{entity.dealStatus},
+            #{entity.dealTime}, #{entity.contactsId}, #{entity.mobile}, #{entity.telephone}, #{entity.website},
+            #{entity.email}, #{entity.remark}, #{entity.createUserId}, #{entity.ownerUserId}, #{entity.roUserId},
+            #{entity.rwUserId}, #{entity.address}, #{entity.location}, #{entity.detailAddress}, #{entity.lng},
+            #{entity.lat}, #{entity.createTime}, #{entity.updateTime}, #{entity.batchId}, #{entity.status},
+            #{entity.lastTime}, #{entity.poolTime}, #{entity.isReceive}, #{entity.lastContent}, #{entity.receiveTime},
+            #{entity.preOwnerUserId}, #{entity.num}, #{entity.dealCycleStart}, #{entity.dealCycleEnd},
+            #{entity.followUserId}, #{entity.noReceiveMoney}, #{entity.dealCycle}, #{entity.addressId},
+            #{entity.addressKd}, #{entity.salesVolume}, #{entity.peopleNum}, #{entity.demandAmount},
+            #{entity.fcustomerId}, #{entity.orgId}, #{entity.forgId}, #{entity.fgroupId})
+        </foreach>
+    </insert>
+    <!-- 批量插入或按主键更新 -->
+    <insert id="insertOrUpdateBatch" keyProperty="customerId" useGeneratedKeys="true">
+        insert into test.wk_crm_customer(customer_name, followup, is_lock, next_time, deal_status, deal_time,
+        contacts_id, mobile, telephone, website, email, remark, create_user_id, owner_user_id, ro_user_id, rw_user_id,
+        address, location, detail_address, lng, lat, create_time, update_time, batch_id, status, last_time, pool_time,
+        is_receive, last_content, receive_time, pre_owner_user_id, num, deal_cycle_start, deal_cycle_end,
+        follow_user_id, no_receive_money, deal_cycle, address_id, address_kd, sales_volume, people_num, demand_amount,
+        fcustomer_id, org_id, forg_id, fgroup_id)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.customerName}, #{entity.followup}, #{entity.isLock}, #{entity.nextTime}, #{entity.dealStatus},
+            #{entity.dealTime}, #{entity.contactsId}, #{entity.mobile}, #{entity.telephone}, #{entity.website},
+            #{entity.email}, #{entity.remark}, #{entity.createUserId}, #{entity.ownerUserId}, #{entity.roUserId},
+            #{entity.rwUserId}, #{entity.address}, #{entity.location}, #{entity.detailAddress}, #{entity.lng},
+            #{entity.lat}, #{entity.createTime}, #{entity.updateTime}, #{entity.batchId}, #{entity.status},
+            #{entity.lastTime}, #{entity.poolTime}, #{entity.isReceive}, #{entity.lastContent}, #{entity.receiveTime},
+            #{entity.preOwnerUserId}, #{entity.num}, #{entity.dealCycleStart}, #{entity.dealCycleEnd},
+            #{entity.followUserId}, #{entity.noReceiveMoney}, #{entity.dealCycle}, #{entity.addressId},
+            #{entity.addressKd}, #{entity.salesVolume}, #{entity.peopleNum}, #{entity.demandAmount},
+            #{entity.fcustomerId}, #{entity.orgId}, #{entity.forgId}, #{entity.fgroupId})
+        </foreach>
+        on duplicate key update
+        customer_name = values(customer_name) , followup = values(followup) , is_lock = values(is_lock) , next_time =
+        values(next_time) , deal_status = values(deal_status) , deal_time = values(deal_time) , contacts_id =
+        values(contacts_id) , mobile = values(mobile) , telephone = values(telephone) , website = values(website) ,
+        email = values(email) , remark = values(remark) , create_user_id = values(create_user_id) , owner_user_id =
+        values(owner_user_id) , ro_user_id = values(ro_user_id) , rw_user_id = values(rw_user_id) , address =
+        values(address) , location = values(location) , detail_address = values(detail_address) , lng = values(lng) ,
+        lat = values(lat) , create_time = values(create_time) , update_time = values(update_time) , batch_id =
+        values(batch_id) , status = values(status) , last_time = values(last_time) , pool_time = values(pool_time) ,
+        is_receive = values(is_receive) , last_content = values(last_content) , receive_time = values(receive_time) ,
+        pre_owner_user_id = values(pre_owner_user_id) , num = values(num) , deal_cycle_start = values(deal_cycle_start)
+        , deal_cycle_end = values(deal_cycle_end) , follow_user_id = values(follow_user_id) , no_receive_money =
+        values(no_receive_money) , deal_cycle = values(deal_cycle) , address_id = values(address_id) , address_kd =
+        values(address_kd) , sales_volume = values(sales_volume) , people_num = values(people_num) , demand_amount =
+        values(demand_amount) , fcustomer_id = values(fcustomer_id) , org_id = values(org_id) , forg_id =
+        values(forg_id) , fgroup_id = values(fgroup_id)
+    </insert>
+</mapper>
+

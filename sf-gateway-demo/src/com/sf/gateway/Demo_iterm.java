@@ -122,8 +122,12 @@ public class Demo_iterm {
 		String source = "[\n" +
 				"    {\n" +
 				"        \"transactionId\":\"308042871316268001Y\",\n" +
-				"        \"companyCode\":\"7550137864\",\n" +
-				"        \"skuNo\":\"123456658572\",\n" +
+				// 货主编码
+//				"        \"companyCode\":\"7550137864\",\n" +
+				"        \"companyCode\":\"OMS2TEST\",\n" +
+//				"        \"skuNo\":\"123456658572\",\n" +
+//				"        \"skuNo\":\"666666\",\n" +
+				"        \"skuNo\":\"164698905827524\",\n" +
 				"        \"skuName\":\"哈根达斯 比利时巧克力冰淇淋 品脱 冷链配送\",\n" +
 				"        \"foreignName\":\"7002111317\",\n" +
 				"        \"shortName\":\"\",\n" +

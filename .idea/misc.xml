@@ -21,6 +21,9 @@
         <option value="$PROJECT_DIR$/spring-boot-timing-Scheduled/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-timing-Quartz/pom.xml" />
         <option value="$PROJECT_DIR$/my_task/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-shunfeng/pom.xml" />
+        <option value="$PROJECT_DIR$/async_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-webmagic/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

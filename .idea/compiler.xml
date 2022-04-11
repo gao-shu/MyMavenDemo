@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-Hutool" />
+        <module name="async_demo" />
         <module name="spring-boot-knife4j" />
         <module name="spring-boot-redis" />
         <module name="kingDee" />
@@ -21,9 +22,11 @@
         <module name="myTest" />
         <module name="spring-boot-swagger" />
         <module name="spring-boot-timing-Scheduled" />
+        <module name="spring-boot-shunfeng" />
         <module name="gaoshu_blog" />
         <module name="java-shunfeng-fengqiao" />
         <module name="spring-boot-learning" />
+        <module name="spring-boot-webmagic" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -51,6 +54,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="LuckyFrameWeb" options="-parameters" />
+      <module name="async_demo" options="-parameters" />
       <module name="gaoshu_blog" options="-parameters" />
       <module name="knife4j" options="-parameters" />
       <module name="my_task" options="-parameters" />
@@ -64,10 +68,12 @@
       <module name="spring-boot-mybtis-plus" options="-parameters" />
       <module name="spring-boot-redis" options="-parameters" />
       <module name="spring-boot-selenium" options="-parameters" />
+      <module name="spring-boot-shunfeng" options="-parameters" />
       <module name="spring-boot-shunfeng-fengqiao" options="-parameters" />
       <module name="spring-boot-swagger" options="-parameters" />
       <module name="spring-boot-timing-Quartz" options="-parameters" />
       <module name="spring-boot-timing-Scheduled" options="-parameters" />
+      <module name="spring-boot-webmagic" options="-parameters" />
       <module name="springboot01" options="-parameters" />
       <module name="swagger-demo" options="-parameters" />
       <module name="swagger_test" options="-parameters" />

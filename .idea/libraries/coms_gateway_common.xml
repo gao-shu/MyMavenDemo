@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="coms-gateway-common">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/sf-gateway-demo/lib/coms-gateway-common.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

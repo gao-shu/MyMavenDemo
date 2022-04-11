@@ -13,9 +13,9 @@ public class CustomerTest {
 
 
     public static void main(String[] args) throws Exception {
-        saveOrUpdate();
+//        saveOrUpdate();
 ////        getOne();
-//        getList();
+        getList();
 //        delete();
 
     }
@@ -195,7 +195,8 @@ public class CustomerTest {
                     "    \"FormId\": \"BD_Customer\",\n" +
                     "    \"FieldKeys\": \"FCUSTID,FUseOrgId ,FDocumentStatus,FForbidStatus, FNumber\",\n" +
 //                    "    \"FilterString\": \"\",\n" +
-                    "    \"FilterString\": \"FNumber = '2021-4'\",\n" +
+//                    "    \"FilterString\": \"FNumber = '2021-4'\",\n" +
+                    "    \"FilterString\": \"FCUSTID = '125380'\",\n" +
                     "    \"OrderString\": \"\",\n" +
                     "    \"TopRowCount\": 0,\n" +
                     "    \"StartRow\": 0,\n" +

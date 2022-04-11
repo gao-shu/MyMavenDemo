@@ -1,0 +1,6 @@
+sfly:
+  url: https://scs-oms2-bspwms.sit.sf-express.com:45316/index.do
+  source: jialefuapptoken
+  appToken: jialefuapptoken
+  v: 1.0
+  userToken: jialefu
