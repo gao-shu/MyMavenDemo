@@ -182,8 +182,9 @@ public class ReturnsTest {
             String sFormId = "";
             String sContent = "{\n" +
                     "    \"FormId\": \"SAL_RETURNSTOCK\",\n" +
-                    "    \"FieldKeys\": \"FBillNo,FSaleOrgId,FDocumentStatus,FCancelStatus,FCancelStatus\",\n" +
-                    "    \"FilterString\": \"\",\n" +
+                    "    \"FieldKeys\": \"FID,FBillNo,FSaleOrgId,FDocumentStatus,FCancelStatus,FCancelStatus\",\n" +
+//                    "    \"FilterString\": \"\",\n" +
+                    "    \"FilterString\": \"FID = 107059\",\n" +
                     "    \"OrderString\": \"\",\n" +
                     "    \"TopRowCount\": 0,\n" +
                     "    \"StartRow\": 0,\n" +

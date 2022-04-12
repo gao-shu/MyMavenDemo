@@ -9,7 +9,6 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/gaoshu_blog/pom.xml" />
-        <option value="$PROJECT_DIR$/thymeleaf/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-learning/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-redis/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-swagger/pom.xml" />
@@ -23,21 +22,9 @@
         <option value="$PROJECT_DIR$/spring-boot-shunfeng/pom.xml" />
         <option value="$PROJECT_DIR$/async_demo/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-webmagic/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-jsoup/pom.xml" />
+        <option value="$PROJECT_DIR$/thymeleaf/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/MyBatis-Plus/pom.xml" />
-        <option value="$PROJECT_DIR$/RedisUtil/pom.xml" />
-        <option value="$PROJECT_DIR$/hutoolsUtil/pom.xml" />
-        <option value="$PROJECT_DIR$/mybatis/pom.xml" />
-        <option value="$PROJECT_DIR$/mybatisPlus/pom.xml" />
-        <option value="$PROJECT_DIR$/mybatisPlus_AutoGenerator/pom.xml" />
-        <option value="$PROJECT_DIR$/mybatis_demo/pom.xml" />
-        <option value="$PROJECT_DIR$/oh-my-email-master/pom.xml" />
-        <option value="$PROJECT_DIR$/servlet/pom.xml" />
-        <option value="$PROJECT_DIR$/swagger-demo/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
