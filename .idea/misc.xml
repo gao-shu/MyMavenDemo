@@ -19,11 +19,10 @@
         <option value="$PROJECT_DIR$/spring-boot-shunfeng-fengqiao/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-timing-Scheduled/pom.xml" />
         <option value="$PROJECT_DIR$/my_task/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot-shunfeng/pom.xml" />
         <option value="$PROJECT_DIR$/async_demo/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot-webmagic/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-jsoup/pom.xml" />
         <option value="$PROJECT_DIR$/thymeleaf/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-0pa/pom.xml" />
       </list>
     </option>
   </component>

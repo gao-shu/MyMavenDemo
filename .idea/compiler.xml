@@ -21,12 +21,9 @@
         <module name="myTest" />
         <module name="spring-boot-swagger" />
         <module name="spring-boot-timing-Scheduled" />
-        <module name="spring-boot-shunfeng" />
         <module name="gaoshu_blog" />
         <module name="java-shunfeng-fengqiao" />
-        <module name="spring-boot-learning" />
-        <module name="spring-boot-webmagic" />
-        <module name="spring-boot-jsoup" />
+        <module name="spring-boot-0pa" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -44,9 +41,13 @@
       <module name="RedisUtil" target="8" />
       <module name="servlet" target="1.5" />
       <module name="sfservice" target="1.5" />
+      <module name="spring-boot-0.pa" target="1.8" />
+      <module name="spring-boot-0.test" target="1.8" />
       <module name="spring-boot-mybtis-plus" target="1.8" />
       <module name="spring-boot-selenium" target="1.8" />
+      <module name="spring-boot-shunfeng" target="1.8" />
       <module name="spring-boot-timing-Quartz" target="1.8" />
+      <module name="spring-boot-webmagic" target="1.8" />
       <module name="springboot01" target="1.8" />
       <module name="swagger-demo" target="1.8" />
       <module name="swagger_test" target="1.8" />
@@ -61,10 +62,11 @@
       <module name="my_task" options="-parameters" />
       <module name="mybatis-plus" options="-parameters" />
       <module name="mybatis-plus-demo" options="-parameters" />
+      <module name="spring-boot-0.pa" options="-parameters" />
+      <module name="spring-boot-0.test" options="-parameters" />
+      <module name="spring-boot-0pa" options="-parameters" />
       <module name="spring-boot-Hutool" options="-parameters" />
-      <module name="spring-boot-jsoup" options="-parameters" />
       <module name="spring-boot-knife4j" options="-parameters" />
-      <module name="spring-boot-learning" options="-parameters" />
       <module name="spring-boot-mybatis" options="-parameters" />
       <module name="spring-boot-mybatis-plus" options="-parameters" />
       <module name="spring-boot-mybtis-plus" options="-parameters" />
