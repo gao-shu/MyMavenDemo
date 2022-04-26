@@ -224,4 +224,51 @@ public class test {
         System.out.println(DateUtil.date(date.getTime()));
         System.out.println(DateUtil.date(0));
     }
+
+    @Test
+    public void demo17() throws InterruptedException {
+        ShoppingUtil.q232();
+    }
+
+
+    @Test
+    public void demo18() throws InterruptedException {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        System.out.println("增强for");
+//        for (Integer a : list) {
+//            for (Integer b : list) {
+//                if (b == 2) {
+//                    return;
+//                }
+//            }
+//            System.out.println(a);
+//        }
+        System.out.println("stream流");
+        list.stream().forEach(a ->{
+
+            for (Integer b : list) {
+                if (a == 2) {
+                    return;
+                }
+            }
+//            list.stream().forEach(b -> {
+//                if (b == 2) {
+//                    return;
+//                }
+//                System.out.println(a+"-"+b);
+//
+//            });
+            System.out.println(a);
+
+        });
+
+    }
+    @Test
+    public void demo19() throws InterruptedException {
+        List<Person> personList = new ArrayList<>();
+        personList.stream().isParallel()
+    }
 }

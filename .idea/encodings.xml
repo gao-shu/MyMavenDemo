@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/async_demo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gaoshu_blog/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my_task/src/main/java" charset="UTF-8" />
@@ -11,14 +11,12 @@
     <file url="file://$PROJECT_DIR$/spring-boot-knife4j/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-mybatis-plus/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-mybatis/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-pa/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-redis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-redis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-shunfeng-fengqiao/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-shunfeng/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-swagger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-test/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-timing-Scheduled/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-webmagic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/thymeleaf/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/thymeleaf/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

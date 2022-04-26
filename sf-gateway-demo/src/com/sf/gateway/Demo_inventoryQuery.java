@@ -117,13 +117,24 @@ public class Demo_inventoryQuery {
 	}
 
 	public static void main(String[] args) throws Exception {
+//		String source = "{\n" +
+////				"    \"erpOrder\":\"11000853401289\",\n" +
+////				"    \"erpOrder\":\"11000853401256\",\n" +
+//				//
+//				"    \"erpOrder\":\"11000853401266\",\n" +
+//				"    \"sfOrderNo\":\"IB791755591612448947-100\",\n" +
+//				"    \"companyCode\":\"OMS2TEST\"\n" +
+//				"}";
+
 		String source = "{\n" +
-//				"    \"erpOrder\":\"11000853401289\",\n" +
-//				"    \"erpOrder\":\"11000853401256\",\n" +
-				//
-				"    \"erpOrder\":\"11000853401266\",\n" +
-				"    \"sfOrderNo\":\"IB791755591612448947-100\",\n" +
-				"    \"companyCode\":\"OMS2TEST\"\n" +
+				"    \"conditions\":[\n" +
+				"        {\n" +
+				"            \"skuCode\":\"164862749570741\",\n" +
+				"            \"warehouseCode\":\"010VB\",\n" +
+				"            \"customerCode\":\"OMS2TEST\",\n" +
+				"            \"inventoryStatus\":\"10\"\n" +
+				"        }\n" +
+				"    ]\n" +
 				"}";
 		Demo_inventoryQuery.demo(source);
 	}

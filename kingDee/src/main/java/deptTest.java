@@ -94,7 +94,7 @@ public class deptTest {
             String sContent = "{\n" +
                     "    \"FormId\": \"BD_Department\",\n" +
                     "    \"FieldKeys\": \"FParentID,FDEPTID,FName,FUseOrgId,FForbidStatus,FUseOrgId,FUseOrgId.Fnumber\",\n" +
-                    "    \"FilterString\": \"\",\n" +
+                    "    \"FilterString\": \"FDEPTID = '16593'\",\n" +
                     "    \"OrderString\": \"\",\n" +
                     "    \"TopRowCount\": 0,\n" +
                     "    \"StartRow\": 0,\n" +
