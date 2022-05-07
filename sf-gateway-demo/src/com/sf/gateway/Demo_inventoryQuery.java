@@ -129,7 +129,7 @@ public class Demo_inventoryQuery {
 		String source = "{\n" +
 				"    \"conditions\":[\n" +
 				"        {\n" +
-				"            \"skuCode\":\"164862749570741\",\n" +
+//				"            \"skuCode\":\"666666\",\n" +
 				"            \"warehouseCode\":\"010VB\",\n" +
 				"            \"customerCode\":\"OMS2TEST\",\n" +
 				"            \"inventoryStatus\":\"10\"\n" +

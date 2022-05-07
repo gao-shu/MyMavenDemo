@@ -24,6 +24,7 @@
         <module name="gaoshu_blog" />
         <module name="java-shunfeng-fengqiao" />
         <module name="spring-boot-0pa" />
+        <module name="spring-boot-file" />
         <module name="spring-boot-test" />
       </profile>
     </annotationProcessing>
@@ -67,6 +68,7 @@
       <module name="spring-boot-0.test" options="-parameters" />
       <module name="spring-boot-0pa" options="-parameters" />
       <module name="spring-boot-Hutool" options="-parameters" />
+      <module name="spring-boot-file" options="-parameters" />
       <module name="spring-boot-knife4j" options="-parameters" />
       <module name="spring-boot-mybatis" options="-parameters" />
       <module name="spring-boot-mybatis-plus" options="-parameters" />

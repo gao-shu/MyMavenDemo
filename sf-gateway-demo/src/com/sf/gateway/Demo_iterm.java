@@ -127,7 +127,7 @@ public class Demo_iterm {
 				"        \"companyCode\":\"OMS2TEST\",\n" +
 //				"        \"skuNo\":\"123456658572\",\n" +
 //				"        \"skuNo\":\"666666\",\n" +
-				"        \"skuNo\":\"6907992822725\",\n" +
+				"        \"skuNo\":\"69202205021459001\",\n" +
 				"        \"skuName\":\"蚝油牛肉\",\n" +
 				"        \"foreignName\":\"7002111317\",\n" +
 				"        \"shortName\":\"\",\n" +
