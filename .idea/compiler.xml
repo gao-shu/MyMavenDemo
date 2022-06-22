@@ -18,9 +18,12 @@
         <module name="POI" />
         <module name="spring-boot-shunfeng-fengqiao" />
         <module name="thymeleaf" />
+        <module name="spring-boot-timing-Scheduled (1)" />
+        <module name="spring-boot-timing-Scheduled (2)" />
         <module name="myTest" />
         <module name="spring-boot-swagger" />
         <module name="spring-boot-timing-Scheduled" />
+        <module name="spring-boot-demo1" />
         <module name="gaoshu_blog" />
         <module name="java-shunfeng-fengqiao" />
         <module name="spring-boot-0pa" />
@@ -45,6 +48,7 @@
       <module name="sfservice" target="1.5" />
       <module name="spring-boot-0.pa" target="1.8" />
       <module name="spring-boot-0.test" target="1.8" />
+      <module name="spring-boot-demo" target="1.8" />
       <module name="spring-boot-mybtis-plus" target="1.8" />
       <module name="spring-boot-selenium" target="1.8" />
       <module name="spring-boot-shunfeng" target="1.8" />
@@ -68,6 +72,8 @@
       <module name="spring-boot-0.test" options="-parameters" />
       <module name="spring-boot-0pa" options="-parameters" />
       <module name="spring-boot-Hutool" options="-parameters" />
+      <module name="spring-boot-demo" options="-parameters" />
+      <module name="spring-boot-demo1" options="-parameters" />
       <module name="spring-boot-file" options="-parameters" />
       <module name="spring-boot-knife4j" options="-parameters" />
       <module name="spring-boot-mybatis" options="-parameters" />
@@ -81,6 +87,8 @@
       <module name="spring-boot-test" options="-parameters" />
       <module name="spring-boot-timing-Quartz" options="-parameters" />
       <module name="spring-boot-timing-Scheduled" options="-parameters" />
+      <module name="spring-boot-timing-Scheduled (1)" options="-parameters" />
+      <module name="spring-boot-timing-Scheduled (2)" options="-parameters" />
       <module name="spring-boot-webmagic" options="-parameters" />
       <module name="springboot01" options="-parameters" />
       <module name="swagger-demo" options="-parameters" />

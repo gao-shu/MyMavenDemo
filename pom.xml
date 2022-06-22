@@ -10,7 +10,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>myTest</module>
-        <module>POI</module>
         <module>kingDee</module>
         <module>spring-boot-Hutool</module>
         <module>java-shunfeng-fengqiao</module>
