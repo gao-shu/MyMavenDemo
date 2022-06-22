@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="generator.mapper.WkCrmContractMapper">
+
+    <resultMap id="BaseResultMap" type="generator.domain.WkCrmContract">
+            <id property="contract_id" column="contract_id" jdbcType="INTEGER"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="customer_id" column="customer_id" jdbcType="INTEGER"/>
+            <result property="business_id" column="business_id" jdbcType="INTEGER"/>
+            <result property="check_status" column="check_status" jdbcType="INTEGER"/>
+            <result property="examine_record_id" column="examine_record_id" jdbcType="INTEGER"/>
+            <result property="order_date" column="order_date" jdbcType="TIMESTAMP"/>
+            <result property="create_user_id" column="create_user_id" jdbcType="BIGINT"/>
+            <result property="owner_user_id" column="owner_user_id" jdbcType="BIGINT"/>
+            <result property="create_time" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="update_time" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="num" column="num" jdbcType="VARCHAR"/>
+            <result property="start_time" column="start_time" jdbcType="TIMESTAMP"/>
+            <result property="end_time" column="end_time" jdbcType="TIMESTAMP"/>
+            <result property="money" column="money" jdbcType="DECIMAL"/>
+            <result property="discount_rate" column="discount_rate" jdbcType="DECIMAL"/>
+            <result property="total_price" column="total_price" jdbcType="DECIMAL"/>
+            <result property="types" column="types" jdbcType="VARCHAR"/>
+            <result property="payment_type" column="payment_type" jdbcType="VARCHAR"/>
+            <result property="batch_id" column="batch_id" jdbcType="VARCHAR"/>
+            <result property="ro_user_id" column="ro_user_id" jdbcType="VARCHAR"/>
+            <result property="rw_user_id" column="rw_user_id" jdbcType="VARCHAR"/>
+            <result property="contacts_id" column="contacts_id" jdbcType="INTEGER"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="company_user_id" column="company_user_id" jdbcType="VARCHAR"/>
+            <result property="last_time" column="last_time" jdbcType="TIMESTAMP"/>
+            <result property="received_money" column="received_money" jdbcType="DECIMAL"/>
+            <result property="unreceived_money" column="unreceived_money" jdbcType="DECIMAL"/>
+            <result property="old_contract_id" column="old_contract_id" jdbcType="INTEGER"/>
+            <result property="money_account" column="money_account" jdbcType="VARCHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="customized" column="customized" jdbcType="VARCHAR"/>
+            <result property="send_dept_id" column="send_dept_id" jdbcType="INTEGER"/>
+            <result property="send_dept_name" column="send_dept_name" jdbcType="VARCHAR"/>
+            <result property="send_warehouse_id" column="send_warehouse_id" jdbcType="VARCHAR"/>
+            <result property="send_warehouse_name" column="send_warehouse_name" jdbcType="VARCHAR"/>
+            <result property="received_status" column="received_status" jdbcType="VARCHAR"/>
+            <result property="send_notice" column="send_notice" jdbcType="VARCHAR"/>
+            <result property="take_goods_type" column="take_goods_type" jdbcType="VARCHAR"/>
+            <result property="express_company" column="express_company" jdbcType="VARCHAR"/>
+            <result property="contract_type" column="contract_type" jdbcType="VARCHAR"/>
+            <result property="freight_money" column="freight_money" jdbcType="VARCHAR"/>
+            <result property="owner_user_moblie" column="owner_user_moblie" jdbcType="VARCHAR"/>
+            <result property="owner_user_organize" column="owner_user_organize" jdbcType="VARCHAR"/>
+            <result property="owner_user_dept" column="owner_user_dept" jdbcType="VARCHAR"/>
+            <result property="logistics_status" column="logistics_status" jdbcType="VARCHAR"/>
+            <result property="logistics_company" column="logistics_company" jdbcType="VARCHAR"/>
+            <result property="logistics_address" column="logistics_address" jdbcType="VARCHAR"/>
+            <result property="logistics_phone" column="logistics_phone" jdbcType="VARCHAR"/>
+            <result property="send_style" column="send_style" jdbcType="VARCHAR"/>
+            <result property="purchase_status" column="purchase_status" jdbcType="VARCHAR"/>
+            <result property="machining_status" column="machining_status" jdbcType="VARCHAR"/>
+            <result property="machining_address" column="machining_address" jdbcType="VARCHAR"/>
+            <result property="machining_remak" column="machining_remak" jdbcType="VARCHAR"/>
+            <result property="collection_style" column="collection_style" jdbcType="VARCHAR"/>
+            <result property="collection_money" column="collection_money" jdbcType="DECIMAL"/>
+            <result property="refund_money" column="refund_money" jdbcType="DECIMAL"/>
+            <result property="notice_delivery" column="notice_delivery" jdbcType="VARCHAR"/>
+            <result property="receiving_name" column="receiving_name" jdbcType="VARCHAR"/>
+            <result property="receiving_mobile" column="receiving_mobile" jdbcType="VARCHAR"/>
+            <result property="receiving_address" column="receiving_address" jdbcType="VARCHAR"/>
+            <result property="receiving_detail_address" column="receiving_detail_address" jdbcType="VARCHAR"/>
+            <result property="deal_time" column="deal_time" jdbcType="TIMESTAMP"/>
+            <result property="kee_contract_id" column="kee_contract_id" jdbcType="INTEGER"/>
+            <result property="kee_contract_status" column="kee_contract_status" jdbcType="VARCHAR"/>
+            <result property="receiving_address_kd" column="receiving_address_kd" jdbcType="VARCHAR"/>
+            <result property="express_company_number" column="express_company_number" jdbcType="VARCHAR"/>
+            <result property="customer_address_id" column="customer_address_id" jdbcType="INTEGER"/>
+            <result property="send_warehouse_num" column="send_warehouse_num" jdbcType="VARCHAR"/>
+            <result property="kee_actual_freight" column="kee_actual_freight" jdbcType="DECIMAL"/>
+            <result property="trans_status" column="trans_status" jdbcType="TINYINT"/>
+            <result property="deliver_status" column="deliver_status" jdbcType="VARCHAR"/>
+            <result property="freight_fee" column="freight_fee" jdbcType="DECIMAL"/>
+            <result property="distribution_fee" column="distribution_fee" jdbcType="DECIMAL"/>
+            <result property="sum_refund_money" column="sum_refund_money" jdbcType="DECIMAL"/>
+            <result property="sum_returns_money" column="sum_returns_money" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        contract_id,name,customer_id,
+        business_id,check_status,examine_record_id,
+        order_date,create_user_id,owner_user_id,
+        create_time,update_time,num,
+        start_time,end_time,money,
+        discount_rate,total_price,types,
+        payment_type,batch_id,ro_user_id,
+        rw_user_id,contacts_id,remark,
+        company_user_id,last_time,received_money,
+        unreceived_money,old_contract_id,money_account,
+        address,customized,send_dept_id,
+        send_dept_name,send_warehouse_id,send_warehouse_name,
+        received_status,send_notice,take_goods_type,
+        express_company,contract_type,freight_money,
+        owner_user_moblie,owner_user_organize,owner_user_dept,
+        logistics_status,logistics_company,logistics_address,
+        logistics_phone,send_style,purchase_status,
+        machining_status,machining_address,machining_remak,
+        collection_style,collection_money,refund_money,
+        notice_delivery,receiving_name,receiving_mobile,
+        receiving_address,receiving_detail_address,deal_time,
+        kee_contract_id,kee_contract_status,receiving_address_kd,
+        express_company_number,customer_address_id,send_warehouse_num,
+        kee_actual_freight,trans_status,deliver_status,
+        freight_fee,distribution_fee,sum_refund_money,
+        sum_returns_money
+    </sql>
+</mapper>

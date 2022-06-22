@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mybatisplus02.mapper.WkCrmCustomerMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.mybatisplus02.entity.po.WkCrmCustomerEntity">
+        <id column="customer_id" property="customerId" />
+        <result column="customer_name" property="customerName" />
+        <result column="followup" property="followup" />
+        <result column="is_lock" property="isLock" />
+        <result column="next_time" property="nextTime" />
+        <result column="deal_status" property="dealStatus" />
+        <result column="deal_time" property="dealTime" />
+        <result column="contacts_id" property="contactsId" />
+        <result column="mobile" property="mobile" />
+        <result column="telephone" property="telephone" />
+        <result column="website" property="website" />
+        <result column="email" property="email" />
+        <result column="remark" property="remark" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="owner_user_id" property="ownerUserId" />
+        <result column="ro_user_id" property="roUserId" />
+        <result column="rw_user_id" property="rwUserId" />
+        <result column="address" property="address" />
+        <result column="location" property="location" />
+        <result column="detail_address" property="detailAddress" />
+        <result column="lng" property="lng" />
+        <result column="lat" property="lat" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="batch_id" property="batchId" />
+        <result column="status" property="status" />
+        <result column="last_time" property="lastTime" />
+        <result column="pool_time" property="poolTime" />
+        <result column="is_receive" property="isReceive" />
+        <result column="last_content" property="lastContent" />
+        <result column="receive_time" property="receiveTime" />
+        <result column="pre_owner_user_id" property="preOwnerUserId" />
+        <result column="num" property="num" />
+        <result column="deal_cycle_start" property="dealCycleStart" />
+        <result column="deal_cycle_end" property="dealCycleEnd" />
+        <result column="follow_user_id" property="followUserId" />
+        <result column="no_receive_money" property="noReceiveMoney" />
+        <result column="deal_cycle" property="dealCycle" />
+        <result column="address_id" property="addressId" />
+        <result column="address_kd" property="addressKd" />
+        <result column="sales_volume" property="salesVolume" />
+        <result column="people_num" property="peopleNum" />
+        <result column="demand_amount" property="demandAmount" />
+        <result column="fcustomer_id" property="fcustomerId" />
+        <result column="org_id" property="orgId" />
+        <result column="forg_id" property="forgId" />
+        <result column="fgroup_id" property="fgroupId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        customer_id, customer_name, followup, is_lock, next_time, deal_status, deal_time, contacts_id, mobile, telephone, website, email, remark, create_user_id, owner_user_id, ro_user_id, rw_user_id, address, location, detail_address, lng, lat, create_time, update_time, batch_id, `status`, last_time, pool_time, is_receive, last_content, receive_time, pre_owner_user_id, num, deal_cycle_start, deal_cycle_end, follow_user_id, no_receive_money, deal_cycle, address_id, address_kd, sales_volume, people_num, demand_amount, fcustomer_id, org_id, forg_id, fgroup_id
+    </sql>
+
+</mapper>

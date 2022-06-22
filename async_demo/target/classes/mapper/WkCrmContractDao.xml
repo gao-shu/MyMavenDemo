@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="demotest.dao.WkCrmContractDao">
+    <resultMap type="demotest.entity.WkCrmContract" id="WkCrmContractMap">
+        <result property="contractId" column="contract_id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+        <result property="businessId" column="business_id" jdbcType="INTEGER"/>
+        <result property="checkStatus" column="check_status" jdbcType="INTEGER"/>
+        <result property="examineRecordId" column="examine_record_id" jdbcType="INTEGER"/>
+        <result property="orderDate" column="order_date" jdbcType="TIMESTAMP"/>
+        <result property="createUserId" column="create_user_id" jdbcType="INTEGER"/>
+        <result property="ownerUserId" column="owner_user_id" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="num" column="num" jdbcType="VARCHAR"/>
+        <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+        <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+        <result property="money" column="money" jdbcType="NUMERIC"/>
+        <result property="discountRate" column="discount_rate" jdbcType="NUMERIC"/>
+        <result property="totalPrice" column="total_price" jdbcType="NUMERIC"/>
+        <result property="types" column="types" jdbcType="VARCHAR"/>
+        <result property="paymentType" column="payment_type" jdbcType="VARCHAR"/>
+        <result property="batchId" column="batch_id" jdbcType="VARCHAR"/>
+        <result property="roUserId" column="ro_user_id" jdbcType="VARCHAR"/>
+        <result property="rwUserId" column="rw_user_id" jdbcType="VARCHAR"/>
+        <result property="contactsId" column="contacts_id" jdbcType="INTEGER"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+        <result property="companyUserId" column="company_user_id" jdbcType="VARCHAR"/>
+        <result property="lastTime" column="last_time" jdbcType="TIMESTAMP"/>
+        <result property="receivedMoney" column="received_money" jdbcType="NUMERIC"/>
+        <result property="unreceivedMoney" column="unreceived_money" jdbcType="NUMERIC"/>
+        <result property="oldContractId" column="old_contract_id" jdbcType="INTEGER"/>
+        <result property="moneyAccount" column="money_account" jdbcType="VARCHAR"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="customized" column="customized" jdbcType="VARCHAR"/>
+        <result property="sendDeptId" column="send_dept_id" jdbcType="INTEGER"/>
+        <result property="sendDeptName" column="send_dept_name" jdbcType="VARCHAR"/>
+        <result property="sendWarehouseId" column="send_warehouse_id" jdbcType="VARCHAR"/>
+        <result property="sendWarehouseName" column="send_warehouse_name" jdbcType="VARCHAR"/>
+        <result property="receivedStatus" column="received_status" jdbcType="VARCHAR"/>
+        <result property="sendNotice" column="send_notice" jdbcType="VARCHAR"/>
+        <result property="takeGoodsType" column="take_goods_type" jdbcType="VARCHAR"/>
+        <result property="expressCompany" column="express_company" jdbcType="VARCHAR"/>
+        <result property="contractType" column="contract_type" jdbcType="VARCHAR"/>
+        <result property="freightMoney" column="freight_money" jdbcType="VARCHAR"/>
+        <result property="ownerUserMoblie" column="owner_user_moblie" jdbcType="VARCHAR"/>
+        <result property="ownerUserOrganize" column="owner_user_organize" jdbcType="VARCHAR"/>
+        <result property="ownerUserDept" column="owner_user_dept" jdbcType="VARCHAR"/>
+        <result property="logisticsStatus" column="logistics_status" jdbcType="VARCHAR"/>
+        <result property="logisticsCompany" column="logistics_company" jdbcType="VARCHAR"/>
+        <result property="logisticsAddress" column="logistics_address" jdbcType="VARCHAR"/>
+        <result property="logisticsPhone" column="logistics_phone" jdbcType="VARCHAR"/>
+        <result property="sendStyle" column="send_style" jdbcType="VARCHAR"/>
+        <result property="purchaseStatus" column="purchase_status" jdbcType="VARCHAR"/>
+        <result property="machiningStatus" column="machining_status" jdbcType="VARCHAR"/>
+        <result property="machiningAddress" column="machining_address" jdbcType="VARCHAR"/>
+        <result property="machiningRemak" column="machining_remak" jdbcType="VARCHAR"/>
+        <result property="collectionStyle" column="collection_style" jdbcType="VARCHAR"/>
+        <result property="collectionMoney" column="collection_money" jdbcType="NUMERIC"/>
+        <result property="refundMoney" column="refund_money" jdbcType="NUMERIC"/>
+        <result property="noticeDelivery" column="notice_delivery" jdbcType="VARCHAR"/>
+        <result property="receivingName" column="receiving_name" jdbcType="VARCHAR"/>
+        <result property="receivingMobile" column="receiving_mobile" jdbcType="VARCHAR"/>
+        <result property="receivingAddress" column="receiving_address" jdbcType="VARCHAR"/>
+        <result property="receivingDetailAddress" column="receiving_detail_address" jdbcType="VARCHAR"/>
+        <result property="dealTime" column="deal_time" jdbcType="TIMESTAMP"/>
+        <result property="keeContractId" column="kee_contract_id" jdbcType="INTEGER"/>
+        <result property="keeContractStatus" column="kee_contract_status" jdbcType="VARCHAR"/>
+        <result property="receivingAddressKd" column="receiving_address_kd" jdbcType="VARCHAR"/>
+        <result property="expressCompanyNumber" column="express_company_number" jdbcType="VARCHAR"/>
+        <result property="customerAddressId" column="customer_address_id" jdbcType="INTEGER"/>
+        <result property="sendWarehouseNum" column="send_warehouse_num" jdbcType="VARCHAR"/>
+        <result property="keeActualFreight" column="kee_actual_freight" jdbcType="NUMERIC"/>
+        <result property="transStatus" column="trans_status" jdbcType="INTEGER"/>
+        <result property="deliverStatus" column="deliver_status" jdbcType="VARCHAR"/>
+        <result property="freightFee" column="freight_fee" jdbcType="NUMERIC"/>
+        <result property="distributionFee" column="distribution_fee" jdbcType="NUMERIC"/>
+        <result property="sumRefundMoney" column="sum_refund_money" jdbcType="NUMERIC"/>
+        <result property="sumReturnsMoney" column="sum_returns_money" jdbcType="NUMERIC"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="WkCrmContractMap">
+        select contract_id,
+               name,
+               customer_id,
+               business_id,
+               check_status,
+               examine_record_id,
+               order_date,
+               create_user_id,
+               owner_user_id,
+               create_time,
+               update_time,
+               num,
+               start_time,
+               end_time,
+               money,
+               discount_rate,
+               total_price,
+               types,
+               payment_type,
+               batch_id,
+               ro_user_id,
+               rw_user_id,
+               contacts_id,
+               remark,
+               company_user_id,
+               last_time,
+               received_money,
+               unreceived_money,
+               old_contract_id,
+               money_account,
+               address,
+               customized,
+               send_dept_id,
+               send_dept_name,
+               send_warehouse_id,
+               send_warehouse_name,
+               received_status,
+               send_notice,
+               take_goods_type,
+               express_company,
+               contract_type,
+               freight_money,
+               owner_user_moblie,
+               owner_user_organize,
+               owner_user_dept,
+               logistics_status,
+               logistics_company,
+               logistics_address,
+               logistics_phone,
+               send_style,
+               purchase_status,
+               machining_status,
+               machining_address,
+               machining_remak,
+               collection_style,
+               collection_money,
+               refund_money,
+               notice_delivery,
+               receiving_name,
+               receiving_mobile,
+               receiving_address,
+               receiving_detail_address,
+               deal_time,
+               kee_contract_id,
+               kee_contract_status,
+               receiving_address_kd,
+               express_company_number,
+               customer_address_id,
+               send_warehouse_num,
+               kee_actual_freight,
+               trans_status,
+               deliver_status,
+               freight_fee,
+               distribution_fee,
+               sum_refund_money,
+               sum_returns_money
+        from wk_crm_contract
+        where contract_id = #{contractId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="WkCrmContractMap">
+        select
+        contract_id, name, customer_id, business_id, check_status, examine_record_id, order_date, create_user_id,
+        owner_user_id, create_time, update_time, num, start_time, end_time, money, discount_rate, total_price, types,
+        payment_type, batch_id, ro_user_id, rw_user_id, contacts_id, remark, company_user_id, last_time, received_money,
+        unreceived_money, old_contract_id, money_account, address, customized, send_dept_id, send_dept_name,
+        send_warehouse_id, send_warehouse_name, received_status, send_notice, take_goods_type, express_company,
+        contract_type, freight_money, owner_user_moblie, owner_user_organize, owner_user_dept, logistics_status,
+        logistics_company, logistics_address, logistics_phone, send_style, purchase_status, machining_status,
+        machining_address, machining_remak, collection_style, collection_money, refund_money, notice_delivery,
+        receiving_name, receiving_mobile, receiving_address, receiving_detail_address, deal_time, kee_contract_id,
+        kee_contract_status, receiving_address_kd, express_company_number, customer_address_id, send_warehouse_num,
+        kee_actual_freight, trans_status, deliver_status, freight_fee, distribution_fee, sum_refund_money,
+        sum_returns_money
+        from wk_crm_contract
+        <where>
+            <if test="contractId != null">
+                and contract_id = #{contractId}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="businessId != null">
+                and business_id = #{businessId}
+            </if>
+            <if test="checkStatus != null">
+                and check_status = #{checkStatus}
+            </if>
+            <if test="examineRecordId != null">
+                and examine_record_id = #{examineRecordId}
+            </if>
+            <if test="orderDate != null">
+                and order_date = #{orderDate}
+            </if>
+            <if test="createUserId != null">
+                and create_user_id = #{createUserId}
+            </if>
+            <if test="ownerUserId != null">
+                and owner_user_id = #{ownerUserId}
+            </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
+            <if test="updateTime != null">
+                and update_time = #{updateTime}
+            </if>
+            <if test="num != null and num != ''">
+                and num = #{num}
+            </if>
+            <if test="startTime != null">
+                and start_time = #{startTime}
+            </if>
+            <if test="endTime != null">
+                and end_time = #{endTime}
+            </if>
+            <if test="money != null">
+                and money = #{money}
+            </if>
+            <if test="discountRate != null">
+                and discount_rate = #{discountRate}
+            </if>
+            <if test="totalPrice != null">
+                and total_price = #{totalPrice}
+            </if>
+            <if test="types != null and types != ''">
+                and types = #{types}
+            </if>
+            <if test="paymentType != null and paymentType != ''">
+                and payment_type = #{paymentType}
+            </if>
+            <if test="batchId != null and batchId != ''">
+                and batch_id = #{batchId}
+            </if>
+            <if test="roUserId != null and roUserId != ''">
+                and ro_user_id = #{roUserId}
+            </if>
+            <if test="rwUserId != null and rwUserId != ''">
+                and rw_user_id = #{rwUserId}
+            </if>
+            <if test="contactsId != null">
+                and contacts_id = #{contactsId}
+            </if>
+            <if test="remark != null and remark != ''">
+                and remark = #{remark}
+            </if>
+            <if test="companyUserId != null and companyUserId != ''">
+                and company_user_id = #{companyUserId}
+            </if>
+            <if test="lastTime != null">
+                and last_time = #{lastTime}
+            </if>
+            <if test="receivedMoney != null">
+                and received_money = #{receivedMoney}
+            </if>
+            <if test="unreceivedMoney != null">
+                and unreceived_money = #{unreceivedMoney}
+            </if>
+            <if test="oldContractId != null">
+                and old_contract_id = #{oldContractId}
+            </if>
+            <if test="moneyAccount != null and moneyAccount != ''">
+                and money_account = #{moneyAccount}
+            </if>
+            <if test="address != null and address != ''">
+                and address = #{address}
+            </if>
+            <if test="customized != null and customized != ''">
+                and customized = #{customized}
+            </if>
+            <if test="sendDeptId != null">
+                and send_dept_id = #{sendDeptId}
+            </if>
+            <if test="sendDeptName != null and sendDeptName != ''">
+                and send_dept_name = #{sendDeptName}
+            </if>
+            <if test="sendWarehouseId != null and sendWarehouseId != ''">
+                and send_warehouse_id = #{sendWarehouseId}
+            </if>
+            <if test="sendWarehouseName != null and sendWarehouseName != ''">
+                and send_warehouse_name = #{sendWarehouseName}
+            </if>
+            <if test="receivedStatus != null and receivedStatus != ''">
+                and received_status = #{receivedStatus}
+            </if>
+            <if test="sendNotice != null and sendNotice != ''">
+                and send_notice = #{sendNotice}
+            </if>
+            <if test="takeGoodsType != null and takeGoodsType != ''">
+                and take_goods_type = #{takeGoodsType}
+            </if>
+            <if test="expressCompany != null and expressCompany != ''">
+                and express_company = #{expressCompany}
+            </if>
+            <if test="contractType != null and contractType != ''">
+                and contract_type = #{contractType}
+            </if>
+            <if test="freightMoney != null and freightMoney != ''">
+                and freight_money = #{freightMoney}
+            </if>
+            <if test="ownerUserMoblie != null and ownerUserMoblie != ''">
+                and owner_user_moblie = #{ownerUserMoblie}
+            </if>
+            <if test="ownerUserOrganize != null and ownerUserOrganize != ''">
+                and owner_user_organize = #{ownerUserOrganize}
+            </if>
+            <if test="ownerUserDept != null and ownerUserDept != ''">
+                and owner_user_dept = #{ownerUserDept}
+            </if>
+            <if test="logisticsStatus != null and logisticsStatus != ''">
+                and logistics_status = #{logisticsStatus}
+            </if>
+            <if test="logisticsCompany != null and logisticsCompany != ''">
+                and logistics_company = #{logisticsCompany}
+            </if>
+            <if test="logisticsAddress != null and logisticsAddress != ''">
+                and logistics_address = #{logisticsAddress}
+            </if>
+            <if test="logisticsPhone != null and logisticsPhone != ''">
+                and logistics_phone = #{logisticsPhone}
+            </if>
+            <if test="sendStyle != null and sendStyle != ''">
+                and send_style = #{sendStyle}
+            </if>
+            <if test="purchaseStatus != null and purchaseStatus != ''">
+                and purchase_status = #{purchaseStatus}
+            </if>
+            <if test="machiningStatus != null and machiningStatus != ''">
+                and machining_status = #{machiningStatus}
+            </if>
+            <if test="machiningAddress != null and machiningAddress != ''">
+                and machining_address = #{machiningAddress}
+            </if>
+            <if test="machiningRemak != null and machiningRemak != ''">
+                and machining_remak = #{machiningRemak}
+            </if>
+            <if test="collectionStyle != null and collectionStyle != ''">
+                and collection_style = #{collectionStyle}
+            </if>
+            <if test="collectionMoney != null">
+                and collection_money = #{collectionMoney}
+            </if>
+            <if test="refundMoney != null">
+                and refund_money = #{refundMoney}
+            </if>
+            <if test="noticeDelivery != null and noticeDelivery != ''">
+                and notice_delivery = #{noticeDelivery}
+            </if>
+            <if test="receivingName != null and receivingName != ''">
+                and receiving_name = #{receivingName}
+            </if>
+            <if test="receivingMobile != null and receivingMobile != ''">
+                and receiving_mobile = #{receivingMobile}
+            </if>
+            <if test="receivingAddress != null and receivingAddress != ''">
+                and receiving_address = #{receivingAddress}
+            </if>
+            <if test="receivingDetailAddress != null and receivingDetailAddress != ''">
+                and receiving_detail_address = #{receivingDetailAddress}
+            </if>
+            <if test="dealTime != null">
+                and deal_time = #{dealTime}
+            </if>
+            <if test="keeContractId != null">
+                and kee_contract_id = #{keeContractId}
+            </if>
+            <if test="keeContractStatus != null and keeContractStatus != ''">
+                and kee_contract_status = #{keeContractStatus}
+            </if>
+            <if test="receivingAddressKd != null and receivingAddressKd != ''">
+                and receiving_address_kd = #{receivingAddressKd}
+            </if>
+            <if test="expressCompanyNumber != null and expressCompanyNumber != ''">
+                and express_company_number = #{expressCompanyNumber}
+            </if>
+            <if test="customerAddressId != null">
+                and customer_address_id = #{customerAddressId}
+            </if>
+            <if test="sendWarehouseNum != null and sendWarehouseNum != ''">
+                and send_warehouse_num = #{sendWarehouseNum}
+            </if>
+            <if test="keeActualFreight != null">
+                and kee_actual_freight = #{keeActualFreight}
+            </if>
+            <if test="transStatus != null">
+                and trans_status = #{transStatus}
+            </if>
+            <if test="deliverStatus != null and deliverStatus != ''">
+                and deliver_status = #{deliverStatus}
+            </if>
+            <if test="freightFee != null">
+                and freight_fee = #{freightFee}
+            </if>
+            <if test="distributionFee != null">
+                and distribution_fee = #{distributionFee}
+            </if>
+            <if test="sumRefundMoney != null">
+                and sum_refund_money = #{sumRefundMoney}
+            </if>
+            <if test="sumReturnsMoney != null">
+                and sum_returns_money = #{sumReturnsMoney}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from wk_crm_contract
+        <where>
+            <if test="contractId != null">
+                and contract_id = #{contractId}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="businessId != null">
+                and business_id = #{businessId}
+            </if>
+            <if test="checkStatus != null">
+                and check_status = #{checkStatus}
+            </if>
+            <if test="examineRecordId != null">
+                and examine_record_id = #{examineRecordId}
+            </if>
+            <if test="orderDate != null">
+                and order_date = #{orderDate}
+            </if>
+            <if test="createUserId != null">
+                and create_user_id = #{createUserId}
+            </if>
+            <if test="ownerUserId != null">
+                and owner_user_id = #{ownerUserId}
+            </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
+            <if test="updateTime != null">
+                and update_time = #{updateTime}
+            </if>
+            <if test="num != null and num != ''">
+                and num = #{num}
+            </if>
+            <if test="startTime != null">
+                and start_time = #{startTime}
+            </if>
+            <if test="endTime != null">
+                and end_time = #{endTime}
+            </if>
+            <if test="money != null">
+                and money = #{money}
+            </if>
+            <if test="discountRate != null">
+                and discount_rate = #{discountRate}
+            </if>
+            <if test="totalPrice != null">
+                and total_price = #{totalPrice}
+            </if>
+            <if test="types != null and types != ''">
+                and types = #{types}
+            </if>
+            <if test="paymentType != null and paymentType != ''">
+                and payment_type = #{paymentType}
+            </if>
+            <if test="batchId != null and batchId != ''">
+                and batch_id = #{batchId}
+            </if>
+            <if test="roUserId != null and roUserId != ''">
+                and ro_user_id = #{roUserId}
+            </if>
+            <if test="rwUserId != null and rwUserId != ''">
+                and rw_user_id = #{rwUserId}
+            </if>
+            <if test="contactsId != null">
+                and contacts_id = #{contactsId}
+            </if>
+            <if test="remark != null and remark != ''">
+                and remark = #{remark}
+            </if>
+            <if test="companyUserId != null and companyUserId != ''">
+                and company_user_id = #{companyUserId}
+            </if>
+            <if test="lastTime != null">
+                and last_time = #{lastTime}
+            </if>
+            <if test="receivedMoney != null">
+                and received_money = #{receivedMoney}
+            </if>
+            <if test="unreceivedMoney != null">
+                and unreceived_money = #{unreceivedMoney}
+            </if>
+            <if test="oldContractId != null">
+                and old_contract_id = #{oldContractId}
+            </if>
+            <if test="moneyAccount != null and moneyAccount != ''">
+                and money_account = #{moneyAccount}
+            </if>
+            <if test="address != null and address != ''">
+                and address = #{address}
+            </if>
+            <if test="customized != null and customized != ''">
+                and customized = #{customized}
+            </if>
+            <if test="sendDeptId != null">
+                and send_dept_id = #{sendDeptId}
+            </if>
+            <if test="sendDeptName != null and sendDeptName != ''">
+                and send_dept_name = #{sendDeptName}
+            </if>
+            <if test="sendWarehouseId != null and sendWarehouseId != ''">
+                and send_warehouse_id = #{sendWarehouseId}
+            </if>
+            <if test="sendWarehouseName != null and sendWarehouseName != ''">
+                and send_warehouse_name = #{sendWarehouseName}
+            </if>
+            <if test="receivedStatus != null and receivedStatus != ''">
+                and received_status = #{receivedStatus}
+            </if>
+            <if test="sendNotice != null and sendNotice != ''">
+                and send_notice = #{sendNotice}
+            </if>
+            <if test="takeGoodsType != null and takeGoodsType != ''">
+                and take_goods_type = #{takeGoodsType}
+            </if>
+            <if test="expressCompany != null and expressCompany != ''">
+                and express_company = #{expressCompany}
+            </if>
+            <if test="contractType != null and contractType != ''">
+                and contract_type = #{contractType}
+            </if>
+            <if test="freightMoney != null and freightMoney != ''">
+                and freight_money = #{freightMoney}
+            </if>
+            <if test="ownerUserMoblie != null and ownerUserMoblie != ''">
+                and owner_user_moblie = #{ownerUserMoblie}
+            </if>
+            <if test="ownerUserOrganize != null and ownerUserOrganize != ''">
+                and owner_user_organize = #{ownerUserOrganize}
+            </if>
+            <if test="ownerUserDept != null and ownerUserDept != ''">
+                and owner_user_dept = #{ownerUserDept}
+            </if>
+            <if test="logisticsStatus != null and logisticsStatus != ''">
+                and logistics_status = #{logisticsStatus}
+            </if>
+            <if test="logisticsCompany != null and logisticsCompany != ''">
+                and logistics_company = #{logisticsCompany}
+            </if>
+            <if test="logisticsAddress != null and logisticsAddress != ''">
+                and logistics_address = #{logisticsAddress}
+            </if>
+            <if test="logisticsPhone != null and logisticsPhone != ''">
+                and logistics_phone = #{logisticsPhone}
+            </if>
+            <if test="sendStyle != null and sendStyle != ''">
+                and send_style = #{sendStyle}
+            </if>
+            <if test="purchaseStatus != null and purchaseStatus != ''">
+                and purchase_status = #{purchaseStatus}
+            </if>
+            <if test="machiningStatus != null and machiningStatus != ''">
+                and machining_status = #{machiningStatus}
+            </if>
+            <if test="machiningAddress != null and machiningAddress != ''">
+                and machining_address = #{machiningAddress}
+            </if>
+            <if test="machiningRemak != null and machiningRemak != ''">
+                and machining_remak = #{machiningRemak}
+            </if>
+            <if test="collectionStyle != null and collectionStyle != ''">
+                and collection_style = #{collectionStyle}
+            </if>
+            <if test="collectionMoney != null">
+                and collection_money = #{collectionMoney}
+            </if>
+            <if test="refundMoney != null">
+                and refund_money = #{refundMoney}
+            </if>
+            <if test="noticeDelivery != null and noticeDelivery != ''">
+                and notice_delivery = #{noticeDelivery}
+            </if>
+            <if test="receivingName != null and receivingName != ''">
+                and receiving_name = #{receivingName}
+            </if>
+            <if test="receivingMobile != null and receivingMobile != ''">
+                and receiving_mobile = #{receivingMobile}
+            </if>
+            <if test="receivingAddress != null and receivingAddress != ''">
+                and receiving_address = #{receivingAddress}
+            </if>
+            <if test="receivingDetailAddress != null and receivingDetailAddress != ''">
+                and receiving_detail_address = #{receivingDetailAddress}
+            </if>
+            <if test="dealTime != null">
+                and deal_time = #{dealTime}
+            </if>
+            <if test="keeContractId != null">
+                and kee_contract_id = #{keeContractId}
+            </if>
+            <if test="keeContractStatus != null and keeContractStatus != ''">
+                and kee_contract_status = #{keeContractStatus}
+            </if>
+            <if test="receivingAddressKd != null and receivingAddressKd != ''">
+                and receiving_address_kd = #{receivingAddressKd}
+            </if>
+            <if test="expressCompanyNumber != null and expressCompanyNumber != ''">
+                and express_company_number = #{expressCompanyNumber}
+            </if>
+            <if test="customerAddressId != null">
+                and customer_address_id = #{customerAddressId}
+            </if>
+            <if test="sendWarehouseNum != null and sendWarehouseNum != ''">
+                and send_warehouse_num = #{sendWarehouseNum}
+            </if>
+            <if test="keeActualFreight != null">
+                and kee_actual_freight = #{keeActualFreight}
+            </if>
+            <if test="transStatus != null">
+                and trans_status = #{transStatus}
+            </if>
+            <if test="deliverStatus != null and deliverStatus != ''">
+                and deliver_status = #{deliverStatus}
+            </if>
+            <if test="freightFee != null">
+                and freight_fee = #{freightFee}
+            </if>
+            <if test="distributionFee != null">
+                and distribution_fee = #{distributionFee}
+            </if>
+            <if test="sumRefundMoney != null">
+                and sum_refund_money = #{sumRefundMoney}
+            </if>
+            <if test="sumReturnsMoney != null">
+                and sum_returns_money = #{sumReturnsMoney}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="contractId" useGeneratedKeys="true">
+        insert into wk_crm_contract(name, customer_id, business_id, check_status, examine_record_id, order_date,
+                                    create_user_id, owner_user_id, create_time, update_time, num, start_time, end_time,
+                                    money, discount_rate, total_price, types, payment_type, batch_id, ro_user_id,
+                                    rw_user_id, contacts_id, remark, company_user_id, last_time, received_money,
+                                    unreceived_money, old_contract_id, money_account, address, customized, send_dept_id,
+                                    send_dept_name, send_warehouse_id, send_warehouse_name, received_status,
+                                    send_notice, take_goods_type, express_company, contract_type, freight_money,
+                                    owner_user_moblie, owner_user_organize, owner_user_dept, logistics_status,
+                                    logistics_company, logistics_address, logistics_phone, send_style, purchase_status,
+                                    machining_status, machining_address, machining_remak, collection_style,
+                                    collection_money, refund_money, notice_delivery, receiving_name, receiving_mobile,
+                                    receiving_address, receiving_detail_address, deal_time, kee_contract_id,
+                                    kee_contract_status, receiving_address_kd, express_company_number,
+                                    customer_address_id, send_warehouse_num, kee_actual_freight, trans_status,
+                                    deliver_status, freight_fee, distribution_fee, sum_refund_money, sum_returns_money)
+        values (#{name}, #{customerId}, #{businessId}, #{checkStatus}, #{examineRecordId}, #{orderDate},
+                #{createUserId}, #{ownerUserId}, #{createTime}, #{updateTime}, #{num}, #{startTime}, #{endTime},
+                #{money}, #{discountRate}, #{totalPrice}, #{types}, #{paymentType}, #{batchId}, #{roUserId},
+                #{rwUserId}, #{contactsId}, #{remark}, #{companyUserId}, #{lastTime}, #{receivedMoney},
+                #{unreceivedMoney}, #{oldContractId}, #{moneyAccount}, #{address}, #{customized}, #{sendDeptId},
+                #{sendDeptName}, #{sendWarehouseId}, #{sendWarehouseName}, #{receivedStatus}, #{sendNotice},
+                #{takeGoodsType}, #{expressCompany}, #{contractType}, #{freightMoney}, #{ownerUserMoblie},
+                #{ownerUserOrganize}, #{ownerUserDept}, #{logisticsStatus}, #{logisticsCompany}, #{logisticsAddress},
+                #{logisticsPhone}, #{sendStyle}, #{purchaseStatus}, #{machiningStatus}, #{machiningAddress},
+                #{machiningRemak}, #{collectionStyle}, #{collectionMoney}, #{refundMoney}, #{noticeDelivery},
+                #{receivingName}, #{receivingMobile}, #{receivingAddress}, #{receivingDetailAddress}, #{dealTime},
+                #{keeContractId}, #{keeContractStatus}, #{receivingAddressKd}, #{expressCompanyNumber},
+                #{customerAddressId}, #{sendWarehouseNum}, #{keeActualFreight}, #{transStatus}, #{deliverStatus},
+                #{freightFee}, #{distributionFee}, #{sumRefundMoney}, #{sumReturnsMoney})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="contractId" useGeneratedKeys="true">
+        insert into wk_crm_contract(name, customer_id, business_id, check_status, examine_record_id, order_date,
+        create_user_id, owner_user_id, create_time, update_time, num, start_time, end_time, money, discount_rate,
+        total_price, types, payment_type, batch_id, ro_user_id, rw_user_id, contacts_id, remark, company_user_id,
+        last_time, received_money, unreceived_money, old_contract_id, money_account, address, customized, send_dept_id,
+        send_dept_name, send_warehouse_id, send_warehouse_name, received_status, send_notice, take_goods_type,
+        express_company, contract_type, freight_money, owner_user_moblie, owner_user_organize, owner_user_dept,
+        logistics_status, logistics_company, logistics_address, logistics_phone, send_style, purchase_status,
+        machining_status, machining_address, machining_remak, collection_style, collection_money, refund_money,
+        notice_delivery, receiving_name, receiving_mobile, receiving_address, receiving_detail_address, deal_time,
+        kee_contract_id, kee_contract_status, receiving_address_kd, express_company_number, customer_address_id,
+        send_warehouse_num, kee_actual_freight, trans_status, deliver_status, freight_fee, distribution_fee,
+        sum_refund_money, sum_returns_money)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.name}, #{entity.customerId}, #{entity.businessId}, #{entity.checkStatus},
+            #{entity.examineRecordId}, #{entity.orderDate}, #{entity.createUserId}, #{entity.ownerUserId},
+            #{entity.createTime}, #{entity.updateTime}, #{entity.num}, #{entity.startTime}, #{entity.endTime},
+            #{entity.money}, #{entity.discountRate}, #{entity.totalPrice}, #{entity.types}, #{entity.paymentType},
+            #{entity.batchId}, #{entity.roUserId}, #{entity.rwUserId}, #{entity.contactsId}, #{entity.remark},
+            #{entity.companyUserId}, #{entity.lastTime}, #{entity.receivedMoney}, #{entity.unreceivedMoney},
+            #{entity.oldContractId}, #{entity.moneyAccount}, #{entity.address}, #{entity.customized},
+            #{entity.sendDeptId}, #{entity.sendDeptName}, #{entity.sendWarehouseId}, #{entity.sendWarehouseName},
+            #{entity.receivedStatus}, #{entity.sendNotice}, #{entity.takeGoodsType}, #{entity.expressCompany},
+            #{entity.contractType}, #{entity.freightMoney}, #{entity.ownerUserMoblie}, #{entity.ownerUserOrganize},
+            #{entity.ownerUserDept}, #{entity.logisticsStatus}, #{entity.logisticsCompany}, #{entity.logisticsAddress},
+            #{entity.logisticsPhone}, #{entity.sendStyle}, #{entity.purchaseStatus}, #{entity.machiningStatus},
+            #{entity.machiningAddress}, #{entity.machiningRemak}, #{entity.collectionStyle}, #{entity.collectionMoney},
+            #{entity.refundMoney}, #{entity.noticeDelivery}, #{entity.receivingName}, #{entity.receivingMobile},
+            #{entity.receivingAddress}, #{entity.receivingDetailAddress}, #{entity.dealTime}, #{entity.keeContractId},
+            #{entity.keeContractStatus}, #{entity.receivingAddressKd}, #{entity.expressCompanyNumber},
+            #{entity.customerAddressId}, #{entity.sendWarehouseNum}, #{entity.keeActualFreight}, #{entity.transStatus},
+            #{entity.deliverStatus}, #{entity.freightFee}, #{entity.distributionFee}, #{entity.sumRefundMoney},
+            #{entity.sumReturnsMoney})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="contractId" useGeneratedKeys="true">
+        insert into wk_crm_contract(name, customer_id, business_id, check_status, examine_record_id, order_date,
+        create_user_id, owner_user_id, create_time, update_time, num, start_time, end_time, money, discount_rate,
+        total_price, types, payment_type, batch_id, ro_user_id, rw_user_id, contacts_id, remark, company_user_id,
+        last_time, received_money, unreceived_money, old_contract_id, money_account, address, customized, send_dept_id,
+        send_dept_name, send_warehouse_id, send_warehouse_name, received_status, send_notice, take_goods_type,
+        express_company, contract_type, freight_money, owner_user_moblie, owner_user_organize, owner_user_dept,
+        logistics_status, logistics_company, logistics_address, logistics_phone, send_style, purchase_status,
+        machining_status, machining_address, machining_remak, collection_style, collection_money, refund_money,
+        notice_delivery, receiving_name, receiving_mobile, receiving_address, receiving_detail_address, deal_time,
+        kee_contract_id, kee_contract_status, receiving_address_kd, express_company_number, customer_address_id,
+        send_warehouse_num, kee_actual_freight, trans_status, deliver_status, freight_fee, distribution_fee,
+        sum_refund_money, sum_returns_money)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.name}, #{entity.customerId}, #{entity.businessId}, #{entity.checkStatus},
+            #{entity.examineRecordId}, #{entity.orderDate}, #{entity.createUserId}, #{entity.ownerUserId},
+            #{entity.createTime}, #{entity.updateTime}, #{entity.num}, #{entity.startTime}, #{entity.endTime},
+            #{entity.money}, #{entity.discountRate}, #{entity.totalPrice}, #{entity.types}, #{entity.paymentType},
+            #{entity.batchId}, #{entity.roUserId}, #{entity.rwUserId}, #{entity.contactsId}, #{entity.remark},
+            #{entity.companyUserId}, #{entity.lastTime}, #{entity.receivedMoney}, #{entity.unreceivedMoney},
+            #{entity.oldContractId}, #{entity.moneyAccount}, #{entity.address}, #{entity.customized},
+            #{entity.sendDeptId}, #{entity.sendDeptName}, #{entity.sendWarehouseId}, #{entity.sendWarehouseName},
+            #{entity.receivedStatus}, #{entity.sendNotice}, #{entity.takeGoodsType}, #{entity.expressCompany},
+            #{entity.contractType}, #{entity.freightMoney}, #{entity.ownerUserMoblie}, #{entity.ownerUserOrganize},
+            #{entity.ownerUserDept}, #{entity.logisticsStatus}, #{entity.logisticsCompany}, #{entity.logisticsAddress},
+            #{entity.logisticsPhone}, #{entity.sendStyle}, #{entity.purchaseStatus}, #{entity.machiningStatus},
+            #{entity.machiningAddress}, #{entity.machiningRemak}, #{entity.collectionStyle}, #{entity.collectionMoney},
+            #{entity.refundMoney}, #{entity.noticeDelivery}, #{entity.receivingName}, #{entity.receivingMobile},
+            #{entity.receivingAddress}, #{entity.receivingDetailAddress}, #{entity.dealTime}, #{entity.keeContractId},
+            #{entity.keeContractStatus}, #{entity.receivingAddressKd}, #{entity.expressCompanyNumber},
+            #{entity.customerAddressId}, #{entity.sendWarehouseNum}, #{entity.keeActualFreight}, #{entity.transStatus},
+            #{entity.deliverStatus}, #{entity.freightFee}, #{entity.distributionFee}, #{entity.sumRefundMoney},
+            #{entity.sumReturnsMoney})
+        </foreach>
+        on duplicate key update
+        name = values(name),
+        customer_id = values(customer_id),
+        business_id = values(business_id),
+        check_status = values(check_status),
+        examine_record_id = values(examine_record_id),
+        order_date = values(order_date),
+        create_user_id = values(create_user_id),
+        owner_user_id = values(owner_user_id),
+        create_time = values(create_time),
+        update_time = values(update_time),
+        num = values(num),
+        start_time = values(start_time),
+        end_time = values(end_time),
+        money = values(money),
+        discount_rate = values(discount_rate),
+        total_price = values(total_price),
+        types = values(types),
+        payment_type = values(payment_type),
+        batch_id = values(batch_id),
+        ro_user_id = values(ro_user_id),
+        rw_user_id = values(rw_user_id),
+        contacts_id = values(contacts_id),
+        remark = values(remark),
+        company_user_id = values(company_user_id),
+        last_time = values(last_time),
+        received_money = values(received_money),
+        unreceived_money = values(unreceived_money),
+        old_contract_id = values(old_contract_id),
+        money_account = values(money_account),
+        address = values(address),
+        customized = values(customized),
+        send_dept_id = values(send_dept_id),
+        send_dept_name = values(send_dept_name),
+        send_warehouse_id = values(send_warehouse_id),
+        send_warehouse_name = values(send_warehouse_name),
+        received_status = values(received_status),
+        send_notice = values(send_notice),
+        take_goods_type = values(take_goods_type),
+        express_company = values(express_company),
+        contract_type = values(contract_type),
+        freight_money = values(freight_money),
+        owner_user_moblie = values(owner_user_moblie),
+        owner_user_organize = values(owner_user_organize),
+        owner_user_dept = values(owner_user_dept),
+        logistics_status = values(logistics_status),
+        logistics_company = values(logistics_company),
+        logistics_address = values(logistics_address),
+        logistics_phone = values(logistics_phone),
+        send_style = values(send_style),
+        purchase_status = values(purchase_status),
+        machining_status = values(machining_status),
+        machining_address = values(machining_address),
+        machining_remak = values(machining_remak),
+        collection_style = values(collection_style),
+        collection_money = values(collection_money),
+        refund_money = values(refund_money),
+        notice_delivery = values(notice_delivery),
+        receiving_name = values(receiving_name),
+        receiving_mobile = values(receiving_mobile),
+        receiving_address = values(receiving_address),
+        receiving_detail_address = values(receiving_detail_address),
+        deal_time = values(deal_time),
+        kee_contract_id = values(kee_contract_id),
+        kee_contract_status = values(kee_contract_status),
+        receiving_address_kd = values(receiving_address_kd),
+        express_company_number = values(express_company_number),
+        customer_address_id = values(customer_address_id),
+        send_warehouse_num = values(send_warehouse_num),
+        kee_actual_freight = values(kee_actual_freight),
+        trans_status = values(trans_status),
+        deliver_status = values(deliver_status),
+        freight_fee = values(freight_fee),
+        distribution_fee = values(distribution_fee),
+        sum_refund_money = values(sum_refund_money),
+        sum_returns_money = values(sum_returns_money)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update wk_crm_contract
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="customerId != null">
+                customer_id = #{customerId},
+            </if>
+            <if test="businessId != null">
+                business_id = #{businessId},
+            </if>
+            <if test="checkStatus != null">
+                check_status = #{checkStatus},
+            </if>
+            <if test="examineRecordId != null">
+                examine_record_id = #{examineRecordId},
+            </if>
+            <if test="orderDate != null">
+                order_date = #{orderDate},
+            </if>
+            <if test="createUserId != null">
+                create_user_id = #{createUserId},
+            </if>
+            <if test="ownerUserId != null">
+                owner_user_id = #{ownerUserId},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+            <if test="num != null and num != ''">
+                num = #{num},
+            </if>
+            <if test="startTime != null">
+                start_time = #{startTime},
+            </if>
+            <if test="endTime != null">
+                end_time = #{endTime},
+            </if>
+            <if test="money != null">
+                money = #{money},
+            </if>
+            <if test="discountRate != null">
+                discount_rate = #{discountRate},
+            </if>
+            <if test="totalPrice != null">
+                total_price = #{totalPrice},
+            </if>
+            <if test="types != null and types != ''">
+                types = #{types},
+            </if>
+            <if test="paymentType != null and paymentType != ''">
+                payment_type = #{paymentType},
+            </if>
+            <if test="batchId != null and batchId != ''">
+                batch_id = #{batchId},
+            </if>
+            <if test="roUserId != null and roUserId != ''">
+                ro_user_id = #{roUserId},
+            </if>
+            <if test="rwUserId != null and rwUserId != ''">
+                rw_user_id = #{rwUserId},
+            </if>
+            <if test="contactsId != null">
+                contacts_id = #{contactsId},
+            </if>
+            <if test="remark != null and remark != ''">
+                remark = #{remark},
+            </if>
+            <if test="companyUserId != null and companyUserId != ''">
+                company_user_id = #{companyUserId},
+            </if>
+            <if test="lastTime != null">
+                last_time = #{lastTime},
+            </if>
+            <if test="receivedMoney != null">
+                received_money = #{receivedMoney},
+            </if>
+            <if test="unreceivedMoney != null">
+                unreceived_money = #{unreceivedMoney},
+            </if>
+            <if test="oldContractId != null">
+                old_contract_id = #{oldContractId},
+            </if>
+            <if test="moneyAccount != null and moneyAccount != ''">
+                money_account = #{moneyAccount},
+            </if>
+            <if test="address != null and address != ''">
+                address = #{address},
+            </if>
+            <if test="customized != null and customized != ''">
+                customized = #{customized},
+            </if>
+            <if test="sendDeptId != null">
+                send_dept_id = #{sendDeptId},
+            </if>
+            <if test="sendDeptName != null and sendDeptName != ''">
+                send_dept_name = #{sendDeptName},
+            </if>
+            <if test="sendWarehouseId != null and sendWarehouseId != ''">
+                send_warehouse_id = #{sendWarehouseId},
+            </if>
+            <if test="sendWarehouseName != null and sendWarehouseName != ''">
+                send_warehouse_name = #{sendWarehouseName},
+            </if>
+            <if test="receivedStatus != null and receivedStatus != ''">
+                received_status = #{receivedStatus},
+            </if>
+            <if test="sendNotice != null and sendNotice != ''">
+                send_notice = #{sendNotice},
+            </if>
+            <if test="takeGoodsType != null and takeGoodsType != ''">
+                take_goods_type = #{takeGoodsType},
+            </if>
+            <if test="expressCompany != null and expressCompany != ''">
+                express_company = #{expressCompany},
+            </if>
+            <if test="contractType != null and contractType != ''">
+                contract_type = #{contractType},
+            </if>
+            <if test="freightMoney != null and freightMoney != ''">
+                freight_money = #{freightMoney},
+            </if>
+            <if test="ownerUserMoblie != null and ownerUserMoblie != ''">
+                owner_user_moblie = #{ownerUserMoblie},
+            </if>
+            <if test="ownerUserOrganize != null and ownerUserOrganize != ''">
+                owner_user_organize = #{ownerUserOrganize},
+            </if>
+            <if test="ownerUserDept != null and ownerUserDept != ''">
+                owner_user_dept = #{ownerUserDept},
+            </if>
+            <if test="logisticsStatus != null and logisticsStatus != ''">
+                logistics_status = #{logisticsStatus},
+            </if>
+            <if test="logisticsCompany != null and logisticsCompany != ''">
+                logistics_company = #{logisticsCompany},
+            </if>
+            <if test="logisticsAddress != null and logisticsAddress != ''">
+                logistics_address = #{logisticsAddress},
+            </if>
+            <if test="logisticsPhone != null and logisticsPhone != ''">
+                logistics_phone = #{logisticsPhone},
+            </if>
+            <if test="sendStyle != null and sendStyle != ''">
+                send_style = #{sendStyle},
+            </if>
+            <if test="purchaseStatus != null and purchaseStatus != ''">
+                purchase_status = #{purchaseStatus},
+            </if>
+            <if test="machiningStatus != null and machiningStatus != ''">
+                machining_status = #{machiningStatus},
+            </if>
+            <if test="machiningAddress != null and machiningAddress != ''">
+                machining_address = #{machiningAddress},
+            </if>
+            <if test="machiningRemak != null and machiningRemak != ''">
+                machining_remak = #{machiningRemak},
+            </if>
+            <if test="collectionStyle != null and collectionStyle != ''">
+                collection_style = #{collectionStyle},
+            </if>
+            <if test="collectionMoney != null">
+                collection_money = #{collectionMoney},
+            </if>
+            <if test="refundMoney != null">
+                refund_money = #{refundMoney},
+            </if>
+            <if test="noticeDelivery != null and noticeDelivery != ''">
+                notice_delivery = #{noticeDelivery},
+            </if>
+            <if test="receivingName != null and receivingName != ''">
+                receiving_name = #{receivingName},
+            </if>
+            <if test="receivingMobile != null and receivingMobile != ''">
+                receiving_mobile = #{receivingMobile},
+            </if>
+            <if test="receivingAddress != null and receivingAddress != ''">
+                receiving_address = #{receivingAddress},
+            </if>
+            <if test="receivingDetailAddress != null and receivingDetailAddress != ''">
+                receiving_detail_address = #{receivingDetailAddress},
+            </if>
+            <if test="dealTime != null">
+                deal_time = #{dealTime},
+            </if>
+            <if test="keeContractId != null">
+                kee_contract_id = #{keeContractId},
+            </if>
+            <if test="keeContractStatus != null and keeContractStatus != ''">
+                kee_contract_status = #{keeContractStatus},
+            </if>
+            <if test="receivingAddressKd != null and receivingAddressKd != ''">
+                receiving_address_kd = #{receivingAddressKd},
+            </if>
+            <if test="expressCompanyNumber != null and expressCompanyNumber != ''">
+                express_company_number = #{expressCompanyNumber},
+            </if>
+            <if test="customerAddressId != null">
+                customer_address_id = #{customerAddressId},
+            </if>
+            <if test="sendWarehouseNum != null and sendWarehouseNum != ''">
+                send_warehouse_num = #{sendWarehouseNum},
+            </if>
+            <if test="keeActualFreight != null">
+                kee_actual_freight = #{keeActualFreight},
+            </if>
+            <if test="transStatus != null">
+                trans_status = #{transStatus},
+            </if>
+            <if test="deliverStatus != null and deliverStatus != ''">
+                deliver_status = #{deliverStatus},
+            </if>
+            <if test="freightFee != null">
+                freight_fee = #{freightFee},
+            </if>
+            <if test="distributionFee != null">
+                distribution_fee = #{distributionFee},
+            </if>
+            <if test="sumRefundMoney != null">
+                sum_refund_money = #{sumRefundMoney},
+            </if>
+            <if test="sumReturnsMoney != null">
+                sum_returns_money = #{sumReturnsMoney},
+            </if>
+        </set>
+        where contract_id = #{contractId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete
+        from wk_crm_contract
+        where contract_id = #{contractId}
+    </delete>
+</mapper>
+

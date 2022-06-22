@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mybatisplus02.mapper.WkCrmContractMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.mybatisplus02.entity.po.WkCrmContractEntity">
+        <id column="contract_id" property="contractId" />
+        <result column="name" property="name" />
+        <result column="customer_id" property="customerId" />
+        <result column="business_id" property="businessId" />
+        <result column="check_status" property="checkStatus" />
+        <result column="examine_record_id" property="examineRecordId" />
+        <result column="order_date" property="orderDate" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="owner_user_id" property="ownerUserId" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="num" property="num" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="money" property="money" />
+        <result column="discount_rate" property="discountRate" />
+        <result column="total_price" property="totalPrice" />
+        <result column="types" property="types" />
+        <result column="payment_type" property="paymentType" />
+        <result column="batch_id" property="batchId" />
+        <result column="ro_user_id" property="roUserId" />
+        <result column="rw_user_id" property="rwUserId" />
+        <result column="contacts_id" property="contactsId" />
+        <result column="remark" property="remark" />
+        <result column="company_user_id" property="companyUserId" />
+        <result column="last_time" property="lastTime" />
+        <result column="received_money" property="receivedMoney" />
+        <result column="unreceived_money" property="unreceivedMoney" />
+        <result column="old_contract_id" property="oldContractId" />
+        <result column="money_account" property="moneyAccount" />
+        <result column="address" property="address" />
+        <result column="customized" property="customized" />
+        <result column="send_dept_id" property="sendDeptId" />
+        <result column="send_dept_name" property="sendDeptName" />
+        <result column="send_warehouse_id" property="sendWarehouseId" />
+        <result column="send_warehouse_name" property="sendWarehouseName" />
+        <result column="received_status" property="receivedStatus" />
+        <result column="send_notice" property="sendNotice" />
+        <result column="take_goods_type" property="takeGoodsType" />
+        <result column="express_company" property="expressCompany" />
+        <result column="contract_type" property="contractType" />
+        <result column="freight_money" property="freightMoney" />
+        <result column="owner_user_moblie" property="ownerUserMoblie" />
+        <result column="owner_user_organize" property="ownerUserOrganize" />
+        <result column="owner_user_dept" property="ownerUserDept" />
+        <result column="logistics_status" property="logisticsStatus" />
+        <result column="logistics_company" property="logisticsCompany" />
+        <result column="logistics_address" property="logisticsAddress" />
+        <result column="logistics_phone" property="logisticsPhone" />
+        <result column="send_style" property="sendStyle" />
+        <result column="purchase_status" property="purchaseStatus" />
+        <result column="machining_status" property="machiningStatus" />
+        <result column="machining_address" property="machiningAddress" />
+        <result column="machining_remak" property="machiningRemak" />
+        <result column="collection_style" property="collectionStyle" />
+        <result column="collection_money" property="collectionMoney" />
+        <result column="refund_money" property="refundMoney" />
+        <result column="notice_delivery" property="noticeDelivery" />
+        <result column="receiving_name" property="receivingName" />
+        <result column="receiving_mobile" property="receivingMobile" />
+        <result column="receiving_address" property="receivingAddress" />
+        <result column="receiving_detail_address" property="receivingDetailAddress" />
+        <result column="deal_time" property="dealTime" />
+        <result column="kee_contract_id" property="keeContractId" />
+        <result column="kee_contract_status" property="keeContractStatus" />
+        <result column="receiving_address_kd" property="receivingAddressKd" />
+        <result column="express_company_number" property="expressCompanyNumber" />
+        <result column="customer_address_id" property="customerAddressId" />
+        <result column="send_warehouse_num" property="sendWarehouseNum" />
+        <result column="kee_actual_freight" property="keeActualFreight" />
+        <result column="trans_status" property="transStatus" />
+        <result column="deliver_status" property="deliverStatus" />
+        <result column="freight_fee" property="freightFee" />
+        <result column="distribution_fee" property="distributionFee" />
+        <result column="sum_refund_money" property="sumRefundMoney" />
+        <result column="sum_returns_money" property="sumReturnsMoney" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        contract_id, `name`, customer_id, business_id, check_status, examine_record_id, order_date, create_user_id, owner_user_id, create_time, update_time, num, start_time, end_time, money, discount_rate, total_price, `types`, payment_type, batch_id, ro_user_id, rw_user_id, contacts_id, remark, company_user_id, last_time, received_money, unreceived_money, old_contract_id, money_account, address, customized, send_dept_id, send_dept_name, send_warehouse_id, send_warehouse_name, received_status, send_notice, take_goods_type, express_company, contract_type, freight_money, owner_user_moblie, owner_user_organize, owner_user_dept, logistics_status, logistics_company, logistics_address, logistics_phone, send_style, purchase_status, machining_status, machining_address, machining_remak, collection_style, collection_money, refund_money, notice_delivery, receiving_name, receiving_mobile, receiving_address, receiving_detail_address, deal_time, kee_contract_id, kee_contract_status, receiving_address_kd, express_company_number, customer_address_id, send_warehouse_num, kee_actual_freight, trans_status, deliver_status, freight_fee, distribution_fee, sum_refund_money, sum_returns_money
+    </sql>
+
+</mapper>
