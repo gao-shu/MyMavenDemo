@@ -20,13 +20,11 @@
         <module name="thymeleaf" />
         <module name="spring-boot-timing-Scheduled (1)" />
         <module name="spring-boot-timing-Scheduled (2)" />
-        <module name="myTest" />
         <module name="spring-boot-swagger" />
         <module name="spring-boot-timing-Scheduled" />
         <module name="spring-boot-demo1" />
         <module name="gaoshu_blog" />
         <module name="java-shunfeng-fengqiao" />
-        <module name="spring-boot-0pa" />
         <module name="spring-boot-file" />
         <module name="spring-boot-test" />
       </profile>
@@ -42,12 +40,14 @@
       <module name="mybatis_demo" target="8" />
       <module name="mybatisPlus" target="8" />
       <module name="mybatisPlus_AutoGenerator" target="8" />
+      <module name="myTest" target="1.8" />
       <module name="oh-my-email-master" target="8" />
       <module name="RedisUtil" target="8" />
       <module name="servlet" target="1.5" />
       <module name="sfservice" target="1.5" />
       <module name="spring-boot-0.pa" target="1.8" />
       <module name="spring-boot-0.test" target="1.8" />
+      <module name="spring-boot-0pa" target="1.8" />
       <module name="spring-boot-demo" target="1.8" />
       <module name="spring-boot-mybtis-plus" target="1.8" />
       <module name="spring-boot-selenium" target="1.8" />
